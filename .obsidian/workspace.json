@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "0c24523a2e6914d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "3a80c6e3b4255de6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f914dc90503a3c66",
+            "type": "leaf",
+            "state": {
+              "type": "html-view",
+              "state": {
+                "file": "reports/盛世精密_2025-11-22.html"
+              },
+              "icon": "code-glyph",
+              "title": "盛世精密_2025-11-22"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "84ef1ee2fcb1b384",
+    "type": "split",
+    "children": [
+      {
+        "id": "0c8b1cb7aa5def17",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d99649eba5a596e5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "83711754f716bf8d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "7a05b2272625608d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "56e1daf57d4647bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "4bf47fa6826d0ea9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "73e796ba8db7f4c8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "reports/盛世精密_2025-11-22.html",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "盛世精密_2025-11-22 的反向链接列表"
+            }
+          },
+          {
+            "id": "26b32056316b56c9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "reports/盛世精密_2025-11-22.html",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "盛世精密_2025-11-22 的出链列表"
+            }
+          },
+          {
+            "id": "d7790eb99eb3ae63",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "f8845d2ec454a485",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "4aed7ab03d0772ee",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "reports/盛世精密_2025-11-22.html",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "盛世精密_2025-11-22 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "f914dc90503a3c66",
+  "lastOpenFiles": [
+    "index.html",
+    "reports/盛世精密_2025-11-22.html"
+  ]
+}
