@@ -25,7 +25,6 @@
     </nav>
 
     <main class="max-w-6xl mx-auto px-4 py-8">
-        
         <div class="mb-8">
             <div class="relative max-w-md mx-auto md:mx-0">
                 <input type="text" id="searchInput" placeholder="搜索企业名称..." 
@@ -38,38 +37,35 @@
             <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12"></div>
         </div>
 
-        <div id="reportContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
-            </div>
+        <div id="reportContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden"></div>
 
         <div id="emptyState" class="hidden text-center py-20 text-gray-500">
             <p>暂无报告数据，请在 n8n 中生成。</p>
         </div>
-
     </main>
 
     <script>
-        // =================配置区=================
+        // === 配置区 ===
         const GITHUB_USERNAME = 'vipc2010'; 
         const REPO_NAME = 'training-reports';
-        const FOLDER_PATH = 'reports'; // n8n里存文件的文件夹名
-        // =======================================
+        const FOLDER_PATH = 'reports'; 
+        // ============
 
         const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${FOLDER_PATH}`;
         const container = document.getElementById('reportContainer');
         const loader = document.getElementById('loader');
         let allFiles = [];
 
-        // 初始化加载
         async function fetchReports() {
             try {
-                const response = await fetch(apiUrl);
+                // 添加时间戳防止缓存
+                const response = await fetch(`${apiUrl}?t=${new Date().getTime()}`);
                 if (!response.ok) throw new Error('Github API Limit or Network Error');
                 const data = await response.json();
                 
-                // 筛选 html 文件并按时间倒序（假设文件名包含日期，或者按上传时间）
                 allFiles = data
                     .filter(file => file.name.endsWith('.html'))
-                    .sort((a, b) => b.name.localeCompare(a.name)); // 简单按文件名倒序
+                    .sort((a, b) => b.name.localeCompare(a.name)); 
 
                 renderReports(allFiles);
                 loader.classList.add('hidden');
@@ -80,7 +76,6 @@
             }
         }
 
-        // 渲染卡片函数
         function renderReports(files) {
             container.innerHTML = '';
             
@@ -90,18 +85,29 @@
             }
 
             files.forEach(file => {
-                // 解析文件名：假设格式为 "奥特佳_2025-11-22.html"
-                // 如果格式不同，这里会显示原始文件名
                 const rawName = file.name.replace('.html', '');
                 let company = rawName;
-                let date = '刚刚';
+                let displayTime = '刚刚';
                 
-                // 尝试拆分 日期和名称 (简单逻辑)
+                // === 核心修改：增强的时间解析逻辑 ===
                 if (rawName.includes('_')) {
                     const parts = rawName.split('_');
-                    company = parts[0];
-                    date = parts[1] || '未知日期';
+                    company = parts[0]; // 第一部分是公司名
+                    
+                    const datePart = parts[1]; // 第二部分是日期 2025-11-22
+                    const timePart = parts[2]; // 第三部分是时间 10-24-05 (旧文件可能没有这部分)
+
+                    if (timePart) {
+                        // 如果有时间部分，把连字符换成冒号，并只取前5位(时:分)
+                        // 10-24-05 -> 10:24
+                        const formattedTime = timePart.replace(/-/g, ':').slice(0, 5);
+                        displayTime = `${datePart} <span class="ml-1 text-gray-400">${formattedTime}</span>`;
+                    } else {
+                        // 旧文件没有时间，只显示日期
+                        displayTime = datePart;
+                    }
                 }
+                // =================================
 
                 const card = `
                     <a href="${FOLDER_PATH}/${file.name}" target="_blank" class="block bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition duration-300 card-hover group">
@@ -109,9 +115,11 @@
                             <div class="bg-blue-50 text-blue-600 rounded-lg p-2">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                             </div>
-                            <span class="text-xs font-medium text-gray-400 bg-gray-50 px-2 py-1 rounded-full">${date}</span>
+                            <span class="text-xs font-medium text-gray-500 bg-gray-50 px-2 py-1 rounded-full tabular-nums">
+                                ${displayTime}
+                            </span>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition">${company}</h3>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition truncate" title="${company}">${company}</h3>
                         <p class="text-sm text-gray-500">点击查看详细培训特征分析报告...</p>
                     </a>
                 `;
@@ -119,7 +127,6 @@
             });
         }
 
-        // 搜索功能
         document.getElementById('searchInput').addEventListener('input', (e) => {
             const term = e.target.value.toLowerCase();
             const filtered = allFiles.filter(file => file.name.toLowerCase().includes(term));
