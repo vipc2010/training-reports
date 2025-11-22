@@ -13,10 +13,10 @@
             "state": {
               "type": "html-view",
               "state": {
-                "file": "reports/奥特佳_2025-11-22_03-46-49.html"
+                "file": "index.html"
               },
               "icon": "code-glyph",
-              "title": "奥特佳_2025-11-22_03-46-49"
+              "title": "index"
             }
           }
         ]
@@ -184,8 +184,11 @@
   },
   "active": "f914dc90503a3c66",
   "lastOpenFiles": [
-    "reports/盛世精密_2025-11-22.html",
+    "reports/今世缘_2025-11-22_09-28-25.html",
+    "reports/今世缘_2025-11-22_09-41-36.html",
     "reports/奥特佳_2025-11-22_03-46-49.html",
+    "reports/天加_2025-11-22_05-56-50.html",
+    "reports/盛世精密_2025-11-22.html",
     "index.html"
   ]
 }
