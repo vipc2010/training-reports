@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业培训情报库 | Training Reports</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #f3f4f6; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .loader { border-top-color: #3B82F6; -webkit-animation: spinner 1.5s linear infinite; animation: spinner 1.5s linear infinite; }
+        @keyframes spinner { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 text-white p-2 rounded-lg font-bold">TR</div>
+                <h1 class="text-xl font-bold tracking-tight">企业培训情报库</h1>
+            </div>
+            <div class="text-sm text-gray-500 hidden sm:block">由 AI Agent 自动生成</div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        
+        <div class="mb-8">
+            <div class="relative max-w-md mx-auto md:mx-0">
+                <input type="text" id="searchInput" placeholder="搜索企业名称..." 
+                    class="w-full pl-10 pr-4 py-3 rounded-xl border-none shadow-sm focus:ring-2 focus:ring-blue-500 outline-none bg-white text-gray-700">
+                <svg class="w-5 h-5 text-gray-400 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+        </div>
+
+        <div id="loader" class="flex justify-center items-center py-20">
+            <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12"></div>
+        </div>
+
+        <div id="reportContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+            </div>
+
+        <div id="emptyState" class="hidden text-center py-20 text-gray-500">
+            <p>暂无报告数据，请在 n8n 中生成。</p>
+        </div>
+
+    </main>
+
+    <script>
+        // =================配置区=================
+        const GITHUB_USERNAME = 'vipc2010'; 
+        const REPO_NAME = 'training-reports';
+        const FOLDER_PATH = 'reports'; // n8n里存文件的文件夹名
+        // =======================================
+
+        const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${FOLDER_PATH}`;
+        const container = document.getElementById('reportContainer');
+        const loader = document.getElementById('loader');
+        let allFiles = [];
+
+        // 初始化加载
+        async function fetchReports() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error('Github API Limit or Network Error');
+                const data = await response.json();
+                
+                // 筛选 html 文件并按时间倒序（假设文件名包含日期，或者按上传时间）
+                allFiles = data
+                    .filter(file => file.name.endsWith('.html'))
+                    .sort((a, b) => b.name.localeCompare(a.name)); // 简单按文件名倒序
+
+                renderReports(allFiles);
+                loader.classList.add('hidden');
+                container.classList.remove('hidden');
+            } catch (error) {
+                console.error(error);
+                loader.innerHTML = `<p class="text-red-500">加载失败，请稍后刷新页面。<br><span class="text-xs text-gray-400">${error.message}</span></p>`;
+            }
+        }
+
+        // 渲染卡片函数
+        function renderReports(files) {
+            container.innerHTML = '';
+            
+            if (files.length === 0) {
+                document.getElementById('emptyState').classList.remove('hidden');
+                return;
+            }
+
+            files.forEach(file => {
+                // 解析文件名：假设格式为 "奥特佳_2025-11-22.html"
+                // 如果格式不同，这里会显示原始文件名
+                const rawName = file.name.replace('.html', '');
+                let company = rawName;
+                let date = '刚刚';
+                
+                // 尝试拆分 日期和名称 (简单逻辑)
+                if (rawName.includes('_')) {
+                    const parts = rawName.split('_');
+                    company = parts[0];
+                    date = parts[1] || '未知日期';
+                }
+
+                const card = `
+                    <a href="${FOLDER_PATH}/${file.name}" target="_blank" class="block bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition duration-300 card-hover group">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="bg-blue-50 text-blue-600 rounded-lg p-2">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <span class="text-xs font-medium text-gray-400 bg-gray-50 px-2 py-1 rounded-full">${date}</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition">${company}</h3>
+                        <p class="text-sm text-gray-500">点击查看详细培训特征分析报告...</p>
+                    </a>
+                `;
+                container.insertAdjacentHTML('beforeend', card);
+            });
+        }
+
+        // 搜索功能
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = allFiles.filter(file => file.name.toLowerCase().includes(term));
+            renderReports(filtered);
+        });
+
+        fetchReports();
+    </script>
+</body>
+</html>
