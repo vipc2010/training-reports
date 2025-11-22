@@ -13,10 +13,10 @@
             "state": {
               "type": "html-view",
               "state": {
-                "file": "reports/盛世精密_2025-11-22.html"
+                "file": "reports/奥特佳_2025-11-22_03-46-49.html"
               },
               "icon": "code-glyph",
-              "title": "盛世精密_2025-11-22"
+              "title": "奥特佳_2025-11-22_03-46-49"
             }
           }
         ]
@@ -184,7 +184,8 @@
   },
   "active": "f914dc90503a3c66",
   "lastOpenFiles": [
-    "index.html",
-    "reports/盛世精密_2025-11-22.html"
+    "reports/盛世精密_2025-11-22.html",
+    "reports/奥特佳_2025-11-22_03-46-49.html",
+    "index.html"
   ]
 }
