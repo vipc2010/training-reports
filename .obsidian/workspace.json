@@ -13,10 +13,10 @@
             "state": {
               "type": "html-view",
               "state": {
-                "file": "index.html"
+                "file": "reports/奥特佳_2025-11-22_03-46-49.html"
               },
               "icon": "code-glyph",
-              "title": "index"
+              "title": "奥特佳_2025-11-22_03-46-49"
             }
           }
         ]
@@ -162,8 +162,19 @@
               "icon": "lucide-list",
               "title": "盛世精密_2025-11-22 的大纲"
             }
+          },
+          {
+            "id": "11cda4f9e07cd9a0",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -182,16 +193,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d99649eba5a596e5",
+  "active": "f914dc90503a3c66",
   "lastOpenFiles": [
     "README.md",
     "index.html",
+    "reports/盛世精密_2025-11-24_11-48-03.html",
+    "reports/今世缘_2025-11-22_09-41-36.html",
+    "reports/盛世精密_2025-11-22.html",
+    "reports/奥特佳_2025-11-22_03-46-49.html",
     "reports/中建八局_2025-11-22_10-45-23.html",
     "reports/新誉_2025-11-26_13-46-07.html",
-    "reports/盛世精密_2025-11-24_11-48-03.html",
-    "reports/盛世精密_2025-11-22.html",
-    "reports/今世缘_2025-11-22_09-41-36.html",
-    "reports/奥特佳_2025-11-22_03-46-49.html",
     "reports/天加_2025-11-22_05-56-50.html",
     "reports/今世缘_2025-11-22_09-28-25.html"
   ]
