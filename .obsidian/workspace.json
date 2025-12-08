@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3a80c6e3b4255de6",
+        "id": "593f08790968098d",
         "type": "tabs",
         "children": [
           {
-            "id": "f914dc90503a3c66",
+            "id": "fa051327e7cf6a84",
             "type": "leaf",
             "state": {
-              "type": "html-view",
-              "state": {
-                "file": "reports/奥特佳_2025-11-22_03-46-49.html"
-              },
-              "icon": "code-glyph",
-              "title": "奥特佳_2025-11-22_03-46-49"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -193,14 +191,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f914dc90503a3c66",
+  "active": "fa051327e7cf6a84",
   "lastOpenFiles": [
+    "reports/奥特佳_2025-11-22_03-46-49.html",
     "README.md",
     "index.html",
     "reports/盛世精密_2025-11-24_11-48-03.html",
     "reports/今世缘_2025-11-22_09-41-36.html",
     "reports/盛世精密_2025-11-22.html",
-    "reports/奥特佳_2025-11-22_03-46-49.html",
     "reports/中建八局_2025-11-22_10-45-23.html",
     "reports/新誉_2025-11-26_13-46-07.html",
     "reports/天加_2025-11-22_05-56-50.html",
