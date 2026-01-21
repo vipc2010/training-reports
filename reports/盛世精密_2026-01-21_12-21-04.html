@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        /* 品牌色定义：采用标准商务蓝 */
+        :root { 
+            --primary: #1e40af; /* 深蓝色 */
+            --accent: #3b82f6;  /* 亮蓝色 */
+            --bg-light: #f1f5f9; 
+            --text-main: #1e293b;
+            --highlight: #fef08a; /* 结论高亮色 */
+        }
+
+        body { 
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; 
+            background: var(--bg-light); 
+            margin: 0; 
+            padding: 30px 15px; 
+            color: var(--text-main); 
+            line-height: 1.7; 
+        }
+
+        .container { 
+            max-width: 850px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); 
+            overflow: hidden; 
+        }
+        
+        /* 头部：与主页面蓝色调统一 */
+        .header { 
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); 
+            padding: 40px; 
+            text-align: center; 
+            color: white; 
+        }
+        .header h1 { margin: 0; font-size: 24px; font-weight: 600; letter-spacing: 0.5px; }
+
+        /* 专项解答卡片 */
+        .qa-card { 
+            margin: -20px 30px 30px; 
+            background: #ffffff; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 12px; 
+            padding: 25px; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .qa-tag { 
+            display: inline-block; 
+            background: var(--primary); 
+            color: white; 
+            padding: 2px 10px; 
+            border-radius: 4px; 
+            font-size: 11px; 
+            margin-bottom: 15px; 
+            font-weight: bold;
+        }
+        .q-text { font-size: 16px; font-weight: 600; color: var(--primary); margin-bottom: 12px; }
+        .a-box { 
+            background: #f8fafc; 
+            padding: 15px; 
+            border-radius: 6px; 
+            font-size: 14.5px; 
+            color: #334155; 
+            border-left: 4px solid var(--accent);
+            white-space: pre-wrap; /* 保留换行但已通过JS压缩多余空格 */
+        }
+
+        /* 报告正文 */
+        .report-content { padding: 0 35px 40px; }
+        
+        /* 修复数据概览框 */
+        .report-content div[style*="background"] { 
+            background: #f1f5f9 !important; 
+            border: 1px solid #cbd5e1 !important; 
+            padding: 20px !important; 
+            margin: 20px 0 !important;
+            border-radius: 8px !important;
+            white-space: normal !important; /* 概览部分不使用 pre-wrap，防止散乱 */
+            font-size: 14px;
+        }
+
+        h3 { 
+            color: var(--primary); 
+            font-size: 18px; 
+            border-left: 5px solid var(--primary); 
+            padding-left: 12px; 
+            margin: 35px 0 15px;
+        }
+
+        /* 高亮优化：重点内容背景色高亮 */
+        strong { 
+            color: #b91c1c; /* 重点文字深红色，更醒目 */
+            background-color: rgba(254, 240, 138, 0.4); 
+            padding: 0 2px;
+            border-bottom: 1px solid #facc15;
+        }
+
+        ul { padding-left: 18px; }
+        li { margin-bottom: 10px; }
+
+        .footer { 
+            background: #f8fafc; 
+            padding: 20px; 
+            text-align: center; 
+            font-size: 11px; 
+            color: #64748b; 
+            border-top: 1px solid #e2e8f0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>盛世精密 - 客户深度培训画像</h1>
+        </div>
+
+        <div class="qa-card">
+            <span class="qa-tag">专项咨询回复</span>
+            <div class="q-text">问：HRD是谁</div>
+            <div class="a-box">🎯 核心线索：未找到明确HRD姓名 + [全文分析]中仅提及"人力资源部全程监督与抽检，确保了评定工作的公平、公正和透明"
+🔍 关联背景：该线索出现在一线员工技能评定活动中，属于公司人才培养与发展业务场景，是公司"能者上、平者让、庸者下"用人机制的重要实施环节
+🚩 风险/机会点：未确定具体HRD姓名，但可通过公司人力资源部组织实施的各类人才发展项目(如储备干部培养、内训师团队建设、技能评定体系等)作为潜在接触点
+首访话术建议："我了解到贵公司人力资源部在一线员工技能评定项目中发挥了重要作用，希望能有机会与贵部门负责人交流人才发展的实践经验。"</div>
+        </div>
+
+        <div class="report-content">
+            <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+    <h3>数据概览</h3>
+    <p><strong>样本量：</strong>73篇培训案例</p>
+    <p><strong>时间跨度：</strong>9/6/2024 至 12/29/2025</p>
+    <p><strong>高频词云：</strong>盛世学堂平台、人才发展、储备干部、技能评定、安全培训、质量文化、反诈宣传、消防演练、述职汇报、组织创新</p>
+</div>
+<h3>培训体系广度评估</h3>
+<ul>
+    <li><strong>多维度覆盖：</strong>盛世精密已建立较为完善的培训体系，涵盖人才培养、安全与生产管理、业务技术、通用素质等多个维度</li>
+    <li><strong>层次分明：</strong>培训形式包括平台建设、技能评定、研讨会、实操培训、文化活动等，呈现多层次、多角度特点</li>
+    <li><strong>重点突出：</strong>对人才梯队建设投入最大，特别是储备干部培养成为核心方向，盛世学堂平台的推出体现了系统性培训思路</li>
+    <li><strong>安全并重：</strong>作为制造型企业，安全与生产管理类培训占比高，符合行业特性与企业保障需求</li>
+    <li><strong>文化渗透：</strong>各类表彰活动、座谈会丰富，体现企业注重文化氛围营造和员工关怀</li>
+</ul>
+<h3>核心需求与痛点识别</h3>
+<ul>
+    <li><strong>核心需求一：人才梯队建设</strong> - 储备干部培养成为重中之重，"述见成长"、"蓄力新程"等系列活动表明企业对后备人才的高度重视</li>
+    <li><strong>核心需求二：技能评价体系</strong> - 刚启动一线员工技能评定，技术人员能力评定为首次举办，表明企业在技能标准化方面处于起步阶段</li>
+    <li><strong>核心需求三：安全文化建设</strong> - 消防演练、反诈宣传、用电安全等培训频繁开展，反映企业对安全生产的持续投入</li>
+    <li><strong>痛点一：业务实操培训不足</strong> - 业务与技术实操类培训仅4项，与实际生产需求可能存在差距</li>
+    <li><strong>痛点二：质量文化需深化</strong> - 虽开展8D评比等活动，但通用素质与文化类培训仅2项，质量意识提升仍有空间</li>
+</ul>
+<h3>业务切入策略建议</h3>
+<ul>
+    <li><strong>存量优化方向：</strong></li>
+    <ul>
+        <li>深化盛世学堂平台应用，构建线上线下混合式学习模式，扩大课程覆盖面</li>
+        <li>完善技能评定体系，建立从一线员工到技术人员的全序列能力标准</li>
+        <li>拓展8D等质量管理工具应用场景，形成问题解决的标准化流程</li>
+        <li>构建安全培训长效机制，定期开展实战演练与效果评估</li>
+    </ul>
+    <li><strong>首访建议：</strong></li>
+    <ul>
+        <li>优先了解企业战略规划与人才发展需求，对齐培训目标与业务方向</li>
+        <li>深入调研现有培训体系的痛点，特别是技能评价与业务实操方面</li>
+        <li>分析安全与质量管理重点难点，提供针对性解决方案</li>
+        <li>探索数字化学习平台优化方向，提升培训效果与覆盖广度</li>
+        <li>设计储备干部培养进阶路径，形成系统化人才发展方案</li>
+    </ul>
+</ul>
+        </div>
+
+        <div class="footer">
+            上海时代光华 S53 业务部 · 数字化情报方案
+        </div>
+    </div>
+</body>
+</html>
