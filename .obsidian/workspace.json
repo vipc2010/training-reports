@@ -11,12 +11,10 @@
             "id": "fa051327e7cf6a84",
             "type": "leaf",
             "state": {
-              "type": "html-view",
-              "state": {
-                "file": "reports/中建八局_2025-11-22_10-45-23.html"
-              },
-              "icon": "code-glyph",
-              "title": "中建八局_2025-11-22_10-45-23"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -178,8 +176,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,19 +190,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fa051327e7cf6a84",
+  "active": "d99649eba5a596e5",
   "lastOpenFiles": [
-    "reports/新誉_2025-11-26_13-46-07.html",
-    "reports/天加_2025-12-08_08-49-51.html",
-    "reports/盛世精密_2025-11-24_11-48-03.html",
     "reports/泉峰_2025-12-08_09-08-53.html",
-    "reports/奥特佳_2025-11-22_03-46-49.html",
+    "reports/中国能建_2026-01-21_08-13-12.html",
+    "reports/中国能建广西院_2026-01-20_01-54-18.html",
     "reports/中建八局_2025-11-22_10-45-23.html",
-    "reports/今世缘_2025-11-22_09-41-36.html",
-    "README.md",
-    "index.html",
-    "reports/盛世精密_2025-11-22.html",
-    "reports/天加_2025-11-22_05-56-50.html",
-    "reports/今世缘_2025-11-22_09-28-25.html"
+    "reports/盛世精密_2026-01-21_08-56-55.html",
+    "reports/盛世精密_2026-01-21_07-56-18.html",
+    "reports/泉峰_2026-01-21_07-11-37.html",
+    "reports/广西院_2026-01-21_01-23-01.html",
+    "reports/中国能建_2026-01-21_07-47-09.html",
+    "reports/中国能建_2026-01-21_07-22-11.html",
+    "reports/中国能建_2026-01-21_07-03-44.html",
+    "README.md"
   ]
 }
