@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        :root { 
+            --shida-blue: #1e3a8a; /* 时代光华品牌深蓝 */
+            --shida-accent: #3b82f6; /* 活力蓝 */
+            --bg: #f4f7fa; 
+            --card-shadow: 0 12px 24px rgba(0,0,0,0.06);
+        }
+
+        body { 
+            font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            padding: 40px 15px; 
+            color: #1e293b; 
+            line-height: 1.8; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: var(--card-shadow); 
+            overflow: hidden; 
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* 顶部横幅：商务渐变 */
+        .header { 
+            background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); 
+            padding: 50px 40px; 
+            text-align: left; 
+            position: relative;
+        }
+        .header h1 { margin: 0; font-size: 28px; color: white; letter-spacing: 1px; }
+        .header::after { 
+            content: ""; 
+            position: absolute; 
+            bottom: 0; 
+            right: 0; 
+            width: 150px; 
+            height: 150px; 
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); 
+        }
+
+        /* 问答板块：卡片悬浮效果 */
+        .qa-section { 
+            margin: -30px 40px 40px; 
+            background: white; 
+            border-radius: 16px; 
+            padding: 30px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+            border: 1px solid #e2e8f0;
+            position: relative;
+            z-index: 10;
+        }
+        .qa-badge { 
+            display: inline-block; 
+            background: var(--shida-blue); 
+            color: white; 
+            padding: 4px 12px; 
+            border-radius: 6px; 
+            font-size: 12px; 
+            font-weight: bold; 
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .q-row { font-size: 18px; font-weight: 700; color: var(--shida-blue); margin-bottom: 15px; }
+        .a-box { 
+            background: #f8fafc; 
+            padding: 20px; 
+            border-radius: 12px; 
+            font-size: 15px; 
+            color: #334155; 
+            border-left: 5px solid var(--shida-accent);
+            white-space: pre-wrap;
+        }
+
+        /* 报告内容区 */
+        .report-content { padding: 0 50px 50px; }
+        
+        /* 针对数据概览的特殊排版 */
+        .report-content div[style*="background"] { 
+            background: #f1f5f9 !important; 
+            border: none !important; 
+            padding: 25px !important; 
+            border-radius: 12px !important;
+            margin: 20px 0 !important;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        h3 { 
+            color: var(--shida-blue); 
+            font-size: 22px; 
+            margin: 50px 0 20px; 
+            display: flex; 
+            align-items: center; 
+        }
+        h3::before { 
+            content: ""; 
+            width: 8px; 
+            height: 24px; 
+            background: var(--shida-accent); 
+            margin-right: 15px; 
+            border-radius: 4px;
+        }
+
+        /* 列表与高亮 */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; list-style-type: none; position: relative; }
+        li::before { content: "→"; color: var(--shida-accent); position: absolute; left: -25px; font-weight: bold; }
+        
+        /* 重点高亮：由单一底色升级为“下划线+微光”效果 */
+        strong { 
+            color: #b91c1c; 
+            background: linear-gradient(120deg, rgba(254,240,138,0.5) 0%, rgba(254,240,138,0.5) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 80%;
+            padding: 0 4px;
+        }
+
+        .footer { 
+            background: #f8fafc; 
+            padding: 30px; 
+            text-align: center; 
+            font-size: 12px; 
+            color: #64748b; 
+            border-top: 1px solid #e2e8f0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>奥特佳 · 客户情报侦察报告</h1>
+        </div>
+        
+        
+
+        <div class="report-content">
+            <h3>[DATA_OVERVIEW]</h3>
+<div style="background-color: #f8fafc; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+  <ul>
+    <li><strong>样本量：</strong>30篇培训相关文档</li>
+    <li><strong>时间跨度：</strong>2019年4月30日至2025年12月22日</li>
+    <li><strong>词云关键词：</strong>
+      <ul>
+        <li>技能培训、精益生产、安全管理</li>
+        <li>班组建设、青年骨干、机加工</li>
+        <li>压缩机拆装、智能制造、数字化转型</li>
+        <li>团队活动、企业文化、"雏鹰计划"</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<h3>培训体系广度评估</h3>
+<p>奥特佳已构建了多维度、全层级的培训体系，覆盖技能提升、管理能力、安全意识和企业文化四大领域。</p>
+<ul>
+  <li><strong>技能培训体系</strong>：通过机加工技能大赛、压缩机拆装竞赛等活动，构建了"以赛促学、以赛促练"的技能人才培养模式，注重实操能力和工匠精神培养。</li>
+  <li><strong>管理能力培训</strong>：实施"卓越班组长培训"和"青年骨干经营能力特训营"，系统性构建了覆盖班组建设能力、精益生产能力、风险防控能力的班组长胜任力模型。</li>
+  <li><strong>安全培训体系</strong>：定期开展"安全生产月"活动，围绕"人人讲安全、个个会应急"主题强化员工安全意识和应急处置能力。</li>
+  <li><strong>企业文化与团队建设</strong>：通过羽毛球比赛等团建活动增强团队凝聚力，将赛场精神转化为工作动力，形成特有的企业文化。</li>
+</ul>
+<h3>核心需求与痛点识别</h3>
+<p>奥特佳培训投入最大的领域主要集中在技能培训和管理培训两大方向，核心需求与痛点分析如下：</p>
+<ul>
+  <li><strong>技能培训需求突出</strong>：企业高度重视一线员工技能提升，通过举办技能竞赛"零误差、高效率"标准，强调精度与效率的双重提升，反映出对工匠型人才的高度需求。</li>
+  <li><strong>管理能力提升迫切</strong>：班组长培训中聚焦角色认知升级、精益工具武装和七大浪费剿灭战，表明企业在基层管理能力和精益生产方面存在显著提升空间。</li>
+  <li><strong>数字化转型挑战</strong>：参观上汽大通灯塔工厂后，员工对数字化智能制造产线表现出强烈学习意愿，反映出企业在数字化转型过程中的人才技能短板。</li>
+  <li><strong>青年人才培养体系化</strong>："雏鹰计划"的实施表明企业重视新生代员工培养，但如何系统化培养青年骨干成为企业未来的中坚力量仍是关键挑战。</li>
+</ul>
+<h3>业务切入策略建议</h3>
+<p>基于奥特佳培训现状分析，提出以下存量优化与首访建议：</p>
+<ul>
+  <li><strong>存量优化策略</strong>：
+    <ul>
+      <li>深化技能培训体系：完善"机加工大师工作室"建设，推广"师徒结对传帮带"模式，构建技能人才梯队。</li>
+      <li>强化精益生产落地：将班组长培训中的精益工具与实际生产环节深度融合，建立改善成果长效追踪机制。</li>
+      <li>完善数字化技能培训：结合参观学习经验，开发针对智能制造、自动化设备的专项培训课程。</li>
+    </ul>
+  </li>
+  <li><strong>首访建议</strong>：
+    <ul>
+      <li>聚焦2030战略蓝图：围绕企业"全球汽车热管理领军企业"目标，设计战略落地所需的专项培训项目。</li>
+      <li>构建三级领导力体系：针对不同层级管理干部，设计差异化的领导力发展项目，支撑企业全球布局战略。</li>
+      <li>创新培训形式：探索"线上+线下"混合式培训模式，结合VR/AR技术提升实操培训效果，解决跨地域培训难题。</li>
+      <li>建立培训效果评估体系：构建全流程培训效果评估机制，将培训成果与员工职业发展通道相结合，提升培训投入回报。</li>
+    </ul>
+  </li>
+</ul>
+        </div>
+
+        <div class="footer">
+            上海时代光华 S53 业务部 · 数字化智库系统
+        </div>
+    </div>
+</body>
+</html>
