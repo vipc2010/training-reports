@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        :root { 
+            --shida-blue: #1e3a8a; /* 时代光华品牌深蓝 */
+            --shida-accent: #3b82f6; /* 活力蓝 */
+            --bg: #f4f7fa; 
+            --card-shadow: 0 12px 24px rgba(0,0,0,0.06);
+        }
+
+        body { 
+            font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            padding: 40px 15px; 
+            color: #1e293b; 
+            line-height: 1.8; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: var(--card-shadow); 
+            overflow: hidden; 
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* 顶部横幅：商务渐变 */
+        .header { 
+            background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); 
+            padding: 50px 40px; 
+            text-align: left; 
+            position: relative;
+        }
+        .header h1 { margin: 0; font-size: 28px; color: white; letter-spacing: 1px; }
+        .header::after { 
+            content: ""; 
+            position: absolute; 
+            bottom: 0; 
+            right: 0; 
+            width: 150px; 
+            height: 150px; 
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); 
+        }
+
+        /* 问答板块：卡片悬浮效果 */
+        .qa-section { 
+            margin: -30px 40px 40px; 
+            background: white; 
+            border-radius: 16px; 
+            padding: 30px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+            border: 1px solid #e2e8f0;
+            position: relative;
+            z-index: 10;
+        }
+        .qa-badge { 
+            display: inline-block; 
+            background: var(--shida-blue); 
+            color: white; 
+            padding: 4px 12px; 
+            border-radius: 6px; 
+            font-size: 12px; 
+            font-weight: bold; 
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .q-row { font-size: 18px; font-weight: 700; color: var(--shida-blue); margin-bottom: 15px; }
+        .a-box { 
+            background: #f8fafc; 
+            padding: 20px; 
+            border-radius: 12px; 
+            font-size: 15px; 
+            color: #334155; 
+            border-left: 5px solid var(--shida-accent);
+            white-space: pre-wrap;
+        }
+
+        /* 报告内容区 */
+        .report-content { padding: 0 50px 50px; }
+        
+        /* 针对数据概览的特殊排版 */
+        .report-content div[style*="background"] { 
+            background: #f1f5f9 !important; 
+            border: none !important; 
+            padding: 25px !important; 
+            border-radius: 12px !important;
+            margin: 20px 0 !important;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        h3 { 
+            color: var(--shida-blue); 
+            font-size: 22px; 
+            margin: 50px 0 20px; 
+            display: flex; 
+            align-items: center; 
+        }
+        h3::before { 
+            content: ""; 
+            width: 8px; 
+            height: 24px; 
+            background: var(--shida-accent); 
+            margin-right: 15px; 
+            border-radius: 4px;
+        }
+
+        /* 列表与高亮 */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; list-style-type: none; position: relative; }
+        li::before { content: "→"; color: var(--shida-accent); position: absolute; left: -25px; font-weight: bold; }
+        
+        /* 重点高亮：由单一底色升级为“下划线+微光”效果 */
+        strong { 
+            color: #b91c1c; 
+            background: linear-gradient(120deg, rgba(254,240,138,0.5) 0%, rgba(254,240,138,0.5) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 80%;
+            padding: 0 4px;
+        }
+
+        .footer { 
+            background: #f8fafc; 
+            padding: 30px; 
+            text-align: center; 
+            font-size: 12px; 
+            color: #64748b; 
+            border-top: 1px solid #e2e8f0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>泉峰 · 客户情报侦察报告</h1>
+        </div>
+        
+        
+
+        <div class="report-content">
+            [DATA_OVERVIEW]：
+<div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+    <h3>数据概览</h3>
+    <p><strong>样本总量：</strong>235篇</p>
+    <p><strong>时间跨度：</strong>2023年9月7日至2026年1月13日</p>
+    <p><strong>词云关键词：</strong>专业技能、领导力发展、内训师、E-learning、安全培训、新员工入职、职业化培训、TTT赋能、资格认证、数字技能</p>
+</div>
+<h3>培训体系广度评估</h3>
+<p>泉峰现有培训体系覆盖多个维度，包括<strong>新员工入职培训</strong>（公司价值观、行为规范、信息安全、产品知识等）、<strong>专业技能提升</strong>（通过E-learning系统提供职业化及专业技能课程）、<strong>领导力发展项目</strong>以及<strong>安全专项培训</strong>。公司已建立内训师团队，并开展初阶TTT赋能训练营，为内训师提供教学技能培训。培训形式包括线下集中授课和线上学习，形成了一定的体系化架构。然而，与区域内"梧桐语"系列活动的多维度、系统化课程搭建相比，泉峰在管理技能培训、跨部门协作培训等方面仍有拓展空间。</p>
+<h3>核心需求与痛点识别</h3>
+<p>基于分析，泉峰在培训方面的<strong>核心投入领域</strong>集中在三个方面：</p>
+<ul>
+    <li><strong>专业技术能力提升</strong>：技术类岗位的技能培训需求突出，特别是算法工程师、JAVA开发、数控操作等技术岗位，与区域内的技能夜校项目（如"无人机装调检修"、"工业机器人系统操作"）相呼应，显示出企业对硬核技术能力的重视</li>
+    <li><strong>安全与生产管理</strong>：泉峰定期举办安全月活动，显示对安全生产的高度重视，此类培训涉及实操技能与风险防控，是企业持续投入的领域</li>
+    <li><strong>内训师队伍建设</strong>：泉峰已启动TTT赋能训练营，系统培养内训师授课能力，显示企业重视知识沉淀与内部知识传递体系建设</li>
+</ul>
+<p>主要痛点在于培训体系缺乏系统性规划，各培训项目之间衔接不足，且数字化学习平台功能有待优化，难以满足员工个性化学习需求。</p>
+<h3>业务切入策略建议</h3>
+<p><strong>存量优化建议</strong>：</p>
+<ul>
+    <li><strong>升级E-learning平台</strong>：引入个性化学习路径推荐，根据员工岗位和能力图谱推送定制化内容，增强学习互动性和趣味性</li>
+    <li><strong>构建分层培训体系</strong>：针对不同层级员工设计差异化培训内容，将新员工培训、专业技能提升、领导力发展有机结合，形成连贯的成长路径</li>
+    <li><strong>深化内训师培养机制</strong>：在TTT基础上增设进阶课程，建立内训师认证与激励机制，促进优质内容持续产出</li>
+</ul>
+<p><strong>首访切入点建议</strong>：</p>
+<ul>
+    <li><strong>专业技术能力提升方案</strong>：结合区域内技能夜校的成熟项目，为泉峰定制"工业机器人系统操作"等实用技术培训，解决关键技术岗位能力提升需求</li>
+    <li><strong>数字技能培训体系</strong>：参考区域内"梧桐语"系列活动，设计针对管理层的数字化领导力培训，帮助企业在数字化转型背景下提升组织效能</li>
+    <li><strong>安全培训升级</strong>：将传统安全培训与VR/AR技术结合，提升培训效果和参与度，同时开发移动学习模块，实现碎片化学习</li>
+    <li><strong>构建学习型组织文化</strong>：设计"泉峰知识共享平台"，鼓励员工贡献经验与案例，形成持续学习的组织氛围</li>
+</ul>
+        </div>
+
+        <div class="footer">
+            上海时代光华 S53 业务部 · 数字化智库系统
+        </div>
+    </div>
+</body>
+</html>
