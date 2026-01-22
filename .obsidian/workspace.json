@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "593f08790968098d",
+        "id": "27fd7849be20ca67",
         "type": "tabs",
         "children": [
           {
-            "id": "fa051327e7cf6a84",
+            "id": "7918d9a91413d74f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "conflict-files-obsidian-git"
             }
           }
         ]
@@ -192,6 +196,7 @@
   },
   "active": "11cda4f9e07cd9a0",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "reports/盛世精密_2026-01-21_09-01-16.html",
     "reports/盛世精密_2026-01-21_12-11-14.html",
     "reports/盛世精密_2026-01-21_12-03-01.html",
@@ -202,7 +207,6 @@
     "reports/盛世精密_2026-01-21_09-44-45.html",
     "reports/盛世精密_2026-01-21_09-26-32.html",
     "reports/盛世精密_2026-01-21_09-18-13.html",
-    "reports/盛世精密_2026-01-21_09-15-18.html",
     "README.md"
   ]
 }
