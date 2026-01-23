@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        :root { 
+            --shida-blue: #1e3a8a; /* 时代光华品牌深蓝 */
+            --shida-accent: #3b82f6; /* 活力蓝 */
+            --bg: #f4f7fa; 
+            --card-shadow: 0 12px 24px rgba(0,0,0,0.06);
+        }
+
+        body { 
+            font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            padding: 40px 15px; 
+            color: #1e293b; 
+            line-height: 1.8; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: var(--card-shadow); 
+            overflow: hidden; 
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* 顶部横幅：商务渐变 */
+        .header { 
+            background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); 
+            padding: 50px 40px; 
+            text-align: left; 
+            position: relative;
+        }
+        .header h1 { margin: 0; font-size: 28px; color: white; letter-spacing: 1px; }
+        .header::after { 
+            content: ""; 
+            position: absolute; 
+            bottom: 0; 
+            right: 0; 
+            width: 150px; 
+            height: 150px; 
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); 
+        }
+
+        /* 问答板块：卡片悬浮效果 */
+        .qa-section { 
+            margin: -30px 40px 40px; 
+            background: white; 
+            border-radius: 16px; 
+            padding: 30px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+            border: 1px solid #e2e8f0;
+            position: relative;
+            z-index: 10;
+        }
+        .qa-badge { 
+            display: inline-block; 
+            background: var(--shida-blue); 
+            color: white; 
+            padding: 4px 12px; 
+            border-radius: 6px; 
+            font-size: 12px; 
+            font-weight: bold; 
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .q-row { font-size: 18px; font-weight: 700; color: var(--shida-blue); margin-bottom: 15px; }
+        .a-box { 
+            background: #f8fafc; 
+            padding: 20px; 
+            border-radius: 12px; 
+            font-size: 15px; 
+            color: #334155; 
+            border-left: 5px solid var(--shida-accent);
+            white-space: pre-wrap;
+        }
+
+        /* 报告内容区 */
+        .report-content { padding: 0 50px 50px; }
+        
+        /* 针对数据概览的特殊排版 */
+        .report-content div[style*="background"] { 
+            background: #f1f5f9 !important; 
+            border: none !important; 
+            padding: 25px !important; 
+            border-radius: 12px !important;
+            margin: 20px 0 !important;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        h3 { 
+            color: var(--shida-blue); 
+            font-size: 22px; 
+            margin: 50px 0 20px; 
+            display: flex; 
+            align-items: center; 
+        }
+        h3::before { 
+            content: ""; 
+            width: 8px; 
+            height: 24px; 
+            background: var(--shida-accent); 
+            margin-right: 15px; 
+            border-radius: 4px;
+        }
+
+        /* 列表与高亮 */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; list-style-type: none; position: relative; }
+        li::before { content: "→"; color: var(--shida-accent); position: absolute; left: -25px; font-weight: bold; }
+        
+        /* 重点高亮：由单一底色升级为“下划线+微光”效果 */
+        strong { 
+            color: #b91c1c; 
+            background: linear-gradient(120deg, rgba(254,240,138,0.5) 0%, rgba(254,240,138,0.5) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 80%;
+            padding: 0 4px;
+        }
+
+        .footer { 
+            background: #f8fafc; 
+            padding: 30px; 
+            text-align: center; 
+            font-size: 12px; 
+            color: #64748b; 
+            border-top: 1px solid #e2e8f0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>中国能建 · 客户情报侦察报告</h1>
+        </div>
+        
+        
+
+        <div class="report-content">
+            <h3>培训体系广度评估</h3>
+<p>中国能建的培训体系呈现出多元化、全覆盖的特点，已构建起较为完善的培训生态体系。从样本分析看，其培训内容覆盖安全与生产管理、通用素质与文化、人才培养与高管、国际业务能力等多个维度。特别是在安全管理、党风廉政教育、技术能力培养和国际业务拓展方面形成了系统化培训体系。培训形式线上线下结合，既有集中培训，也有分散学习，同时注重实战演练和文化浸润。整体来看，公司培训体系注重战略引领与业务需求的深度融合，既关注短期业务能力提升，也重视长期人才梯队建设，形成了"党建+业务"双轮驱动的培训格局。</p>
+<h3>核心需求与痛点识别</h3>
+<p>根据数据分析，中国能建在培训领域投入最大的主要集中在以下三个方面：</p>
+<ul>
+  <li><strong>安全生产管理培训</strong>：作为能源建设企业，安全生产是重中之重。公司定期开展"安全生产月"活动，发布《致公司全体干部员工的安全生产公开信》，并组织冬季施工安全专项培训，显示对安全生产的高度重视。特别是在大型能源项目建设中，安全管理成为首要关注点。</li>
+  <li><strong>党风廉政建设培训</strong>：公司高度重视廉洁文化建设，举办"廉洁文化月"活动，通过多种形式开展廉洁教育，如"廉"课入脑入心、"廉"语云端立信等，反映出党风廉政培训已成为培训体系的重要组成部分。</li>
+  <li><strong>专业技术与管理能力培训</strong>：在技术创新和项目管理方面，公司开展了焊接技术、新能源技术、国际项目管理等专业培训，并举办创新创效大赛，表明技术能力和管理创新是核心培训需求，特别是在推动转型升级过程中。</li>
+</ul>
+<h3>业务切入策略建议</h3>
+<p><strong>存量优化建议：</strong></p>
+<ul>
+  <li>深化安全管理培训体系升级：针对能源建设行业特点，结合公司"八字方针"和"创新图强、设计创优、数智重效、精益求实"理念，构建分层级的安全管理培训体系，特别强化一线人员的安全实操能力培养。</li>
+  <li>强化党建与业务融合培训：围绕公司"八个底座"和"五个价值"建设，开发党建与业务深度融合的培训课程，帮助党员干部更好地发挥先锋模范作用，引领高质量发展。</li>
+  <li>打造专业技术能力提升平台：针对焊接、新能源、智能建造等关键技术领域，建立系统化的技术培训体系，特别关注90后、95后青年技术骨干的培养，助力"人才是第一资源"战略实施。</li>
+</ul>
+<p><strong>首访建议：</strong></p>
+<ul>
+  <li>安全管理专家首访：建议组织安全管理专家团队进行首次访问，重点探讨如何构建适应公司业务特点的本质安全管理体系，提供从理念到实操的全套解决方案。</li>
+  <li>项目管理顾问首访：针对公司EPC项目管理痛点，邀请项目管理专家进行首访，重点关注项目全生命周期管理、风险防控和团队协作等方面的培训需求。</li>
+  <li>国际业务专家首访：结合公司国际化发展战略，邀请具有丰富国际项目经验的专家进行首访，重点研讨国际项目管理、跨文化沟通和风险防控等主题培训方案。</li>
+</ul>
+        </div>
+
+        <div class="footer">
+            上海时代光华 S53 业务部 · 数字化智库系统
+        </div>
+    </div>
+</body>
+</html>
