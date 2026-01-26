@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        :root { 
+            --shida-blue: #1e3a8a; /* 时代光华品牌深蓝 */
+            --shida-accent: #3b82f6; /* 活力蓝 */
+            --bg: #f4f7fa; 
+            --card-shadow: 0 12px 24px rgba(0,0,0,0.06);
+        }
+
+        body { 
+            font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            padding: 40px 15px; 
+            color: #1e293b; 
+            line-height: 1.8; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: var(--card-shadow); 
+            overflow: hidden; 
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* 顶部横幅：商务渐变 */
+        .header { 
+            background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); 
+            padding: 50px 40px; 
+            text-align: left; 
+            position: relative;
+        }
+        .header h1 { margin: 0; font-size: 28px; color: white; letter-spacing: 1px; }
+        .header::after { 
+            content: ""; 
+            position: absolute; 
+            bottom: 0; 
+            right: 0; 
+            width: 150px; 
+            height: 150px; 
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); 
+        }
+
+        /* 问答板块：卡片悬浮效果 */
+        .qa-section { 
+            margin: -30px 40px 40px; 
+            background: white; 
+            border-radius: 16px; 
+            padding: 30px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+            border: 1px solid #e2e8f0;
+            position: relative;
+            z-index: 10;
+        }
+        .qa-badge { 
+            display: inline-block; 
+            background: var(--shida-blue); 
+            color: white; 
+            padding: 4px 12px; 
+            border-radius: 6px; 
+            font-size: 12px; 
+            font-weight: bold; 
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .q-row { font-size: 18px; font-weight: 700; color: var(--shida-blue); margin-bottom: 15px; }
+        .a-box { 
+            background: #f8fafc; 
+            padding: 20px; 
+            border-radius: 12px; 
+            font-size: 15px; 
+            color: #334155; 
+            border-left: 5px solid var(--shida-accent);
+            white-space: pre-wrap;
+        }
+
+        /* 报告内容区 */
+        .report-content { padding: 0 50px 50px; }
+        
+        /* 针对数据概览的特殊排版 */
+        .report-content div[style*="background"] { 
+            background: #f1f5f9 !important; 
+            border: none !important; 
+            padding: 25px !important; 
+            border-radius: 12px !important;
+            margin: 20px 0 !important;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        h3 { 
+            color: var(--shida-blue); 
+            font-size: 22px; 
+            margin: 50px 0 20px; 
+            display: flex; 
+            align-items: center; 
+        }
+        h3::before { 
+            content: ""; 
+            width: 8px; 
+            height: 24px; 
+            background: var(--shida-accent); 
+            margin-right: 15px; 
+            border-radius: 4px;
+        }
+
+        /* 列表与高亮 */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; list-style-type: none; position: relative; }
+        li::before { content: "→"; color: var(--shida-accent); position: absolute; left: -25px; font-weight: bold; }
+        
+        /* 重点高亮：由单一底色升级为“下划线+微光”效果 */
+        strong { 
+            color: #b91c1c; 
+            background: linear-gradient(120deg, rgba(254,240,138,0.5) 0%, rgba(254,240,138,0.5) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 80%;
+            padding: 0 4px;
+        }
+
+        .footer { 
+            background: #f8fafc; 
+            padding: 30px; 
+            text-align: center; 
+            font-size: 12px; 
+            color: #64748b; 
+            border-top: 1px solid #e2e8f0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>亚威 · 客户情报侦察报告</h1>
+        </div>
+        
+        
+
+        <div class="report-content">
+            [DATA_OVERVIEW]：核心数据的可视化展示。
+<h3>战略意图穿透</h3>
+<ul>
+  <li>亚威股份将"智能制造"和"新员工培养"作为双轮驱动的战略核心，这反映出公司正处于从传统制造向智能制造转型的关键期，急需新鲜血液注入，同时对现有员工进行智能化升级</li>
+  <li>"师带徒+积分制"培养模式表明公司重视实战能力培养，而非理论灌输，这种与业务紧密结合的培养方式显示出公司对人才培养的务实态度</li>
+  <li>董事长冷志斌多次强调"创新为引擎，实干为基石"，并寄语新员工"脚下有泥—扎深技术的根；眼里有光—永葆创新的热情；心中有火—坚守制造人的担当"，这揭示出公司对技术创新和人才培养的重视程度已提升到最高战略层级</li>
+  <li>公司成立全国金属板材加工装备行业产教融合共同体，并牵头制定17项国家标准(已发布7项)，表明公司正在从"产品提供商"向"行业标准和生态系统构建者"转变的战略意图</li>
+  <li>公司采用"一级抓一级、层层抓落实"的责任体系，强化目标管理和考核，显示其正从粗放式管理向精细化、数据化管理的转型</li>
+</ul>
+<h3>关键决策路径研判</h3>
+<ul>
+  <li><strong>一把手工程识别</strong>：董事长冷志斌不仅是党委书记、总经理，还亲自参与新员工欢迎会、运营会议、党员大会等重要活动，表明人才培养和智能制造升级是"一把手工程"，是冷志斌最为关注的战略方向</li>
+  <li><strong>决策参与度分析</strong>：
+    <ul>
+      <li>董事长冷志斌：战略方向、顶层设计、重大项目决策</li>
+      <li>人力资源总监刘俊伟：人才培养体系实施、新员工融入机制</li>
+      <li>党委副书记施金霞：企业文化建设、党员思想建设</li>
+      <li>高管团队：绩效考核、销售目标管理、供应链质量管控</li>
+    </ul>
+  </li>
+  <li><strong>考核与激励机制</strong>：公司实施"第三期限制性股票激励计划"，针对核心技术和业务人员，表明对高端人才的重视和对长期业绩的考核导向</li>
+  <li><strong>培训全链路评估</strong>：
+    <ul>
+      <li><strong>输入端</strong>：新员工"师带徒+积分制"培养机制，注重理论与实践结合</li>
+      <li><strong>过程管控</strong>：专人信息化跟踪管理，确保培养质量</li>
+      <li><strong>输出端</strong>：与绩效考核挂钩，有明确的成长路径和激励机制</li>
+      <li><strong>落地评估</strong>：通过技能竞赛、评优活动等检验培训效果</li>
+    </ul>
+  </li>
+  <li><strong>培训与业务结合度</strong>：从维度权重分析看，"生产/安全/质量/工艺等"标签出现9次，"新员工"出现8次，"公司高管"5次，显示培训内容紧密结合业务实操，而非纯通用主题，有效避免培训与业务脱节</li>
+</ul>
+<h3>S53 专项攻坚建议</h3>
+<ul>
+  <li><strong>首访话术</strong>："冷董您好，我们注意到亚威股份正在全面推进智能制造转型，并在人才培养方面建立了'师带徒+积分制'的创新模式。我们的XX方案可以强化贵公司在智能制造人才培养方面的数字化管理能力，通过AI赋能帮助新员工更快掌握智能制造技能，同时提高师带徒的培养效率。贵公司在产教融合方面的经验也可以作为行业标杆，我们希望与贵公司共同打造智能制造人才培训的行业标准。"</li>
+  <li><strong>核心对标方案</strong>：针对亚威股份"师带徒+积分制"培养模式和智能制造转型需求，推荐我们的"智能制造实训云平台+人才数字化管理方案"，该方案包括：
+    <ul>
+      <li>数字化技能图谱：为每位员工建立个性化的智能制造技能发展路径</li>
+      <li>智能导师匹配系统：基于算法匹配最适合的导师，提高师带徒效率</li>
+      <li>积分制数字化管理：将积分与学习、实践成果自动关联，实现公正透明的评价</li>
+      <li>远程专家支持平台：连接行业专家资源，为复杂技术问题提供实时支持</li>
+      <li>数据驱动的培养效果分析：实时跟踪培训效果，持续优化培养策略</li>
+    </ul>
+  </li>
+  <li><strong>攻击性策略</strong>：既然亚威股份在2022年度入选了"智能制造标准应用试点项目"，并正在建设"高档数控金属板材成形机床远程运维标准应用试点"，说明他们极度重视标准落地和数字化转型。建议销售团队重点推荐我们的"智能制造标准落地实战化方案"，该方案可以帮助亚威：
+    <ul>
+      <li>加速国家标准《智能制造远程运维系统通用要求》的落地应用</li>
+      <li>将公司已有的17项国家标准转化为可执行的培训内容</li>
+      <li>通过数字化手段提升远程运维服务效率和质量</li>
+      <li>为产教融合共同体提供标准化的培训解决方案</li>
+    </ul>
+  </li>
+</ul>
+        </div>
+
+        <div class="footer">
+            上海时代光华 S53 业务部 · 数字化智库系统
+        </div>
+    </div>
+</body>
+</html>
