@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root { --shida-blue: #1e3a8a; --shida-accent: #3b82f6; --bg: #f8fafc; }
+        body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); margin: 0; padding: 40px 15px; color: #1e293b; line-height: 1.8; }
+        .container { max-width: 900px; margin: 0 auto; background: white; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); overflow: hidden; }
+        
+        .header { background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); padding: 60px 50px; color: white; }
+        .header h1 { margin: 0; font-size: 32px; font-weight: 800; letter-spacing: -0.5px; }
+
+        /* 核心修改：彻底去表格化，改为卡片式 Grid */
+        .overview-grid {
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+            padding: 0 50px;
+            margin-top: -30px; /* 向上悬浮效果 */
+        }
+        .ov-item { 
+            background: white; 
+            padding: 25px 20px; 
+            border-radius: 16px; 
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+            border: 1px solid #edf2f7;
+            transition: transform 0.3s ease;
+        }
+        .ov-item:hover { transform: translateY(-5px); }
+        .ov-item strong { 
+            display: block; 
+            color: #64748b !important; 
+            font-size: 13px; 
+            font-weight: 600;
+            margin-bottom: 12px; 
+            background: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+        .ov-item span { 
+            display: block; 
+            font-size: 18px; 
+            font-weight: 700; 
+            color: var(--shida-blue); 
+            line-height: 1.3;
+        }
+
+        .report-content { padding: 40px 50px 60px; }
+        h3 { color: var(--shida-blue); font-size: 24px; margin: 45px 0 25px; display: flex; align-items: center; font-weight: 700; }
+        h3::before { content: ""; width: 6px; height: 24px; background: var(--shida-accent); margin-right: 15px; border-radius: 3px; }
+        
+        ul { padding-left: 0; }
+        li { margin-bottom: 18px; list-style: none; padding-left: 28px; position: relative; color: #334155; }
+        li::before { content: "→"; color: var(--shida-accent); position: absolute; left: 0; font-weight: bold; }
+        
+        /* 关键信息高亮 */
+        strong { 
+            color: var(--shida-blue); 
+            background: rgba(59, 130, 246, 0.1); 
+            padding: 2px 6px; 
+            border-radius: 4px; 
+            font-weight: 700; 
+        }
+
+        .footer { background: #f8fafc; padding: 30px; text-align: center; font-size: 13px; color: #94a3b8; border-top: 1px solid #f1f5f9; }
+
+        @media (max-width: 768px) {
+            .overview-grid { grid-template-columns: 1fr; padding: 0 25px; }
+            .report-content { padding: 30px 25px; }
+            .header { padding: 40px 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>亚威 · 人才发展诊断报告</h1></div>
+        
+        <div class="overview-grid">
+            <div class="ov-item"><strong>样本总量</strong><span>26 篇</span></div>
+            <div class="ov-item"><strong>时间跨度</strong><span>2024 - 2026</span></div>
+            <div class="ov-item"><strong>核心关注</strong><span>亚威股份 · 生产/安全/质量/工艺等 · 新员工 · 公司高管 · 智能制造</span></div>
+        </div>
+
+        <div class="report-content">
+            <h3>一、 战略穿透：从高层意志看业务焦点</h3>
+<ul>
+<li><strong>冷志斌</strong>董事长在新员工欢迎会上传递的核心焦虑已非常明确："脚下有泥——扎深技术的根；眼里有光——永葆创新的热情；心中有火——坚守制造人的担当"。这组表述暗示亚威当前最迫切的人才能力短板是<strong>技术深度</strong>、<strong>创新活力</strong>与<strong>制造文化传承</strong>的三重缺失。董事长未提及管理能力或数字化能力，表明这些并非当前最痛点。</li>
+<li>在<strong>第二次党员大会</strong>上，冷总进一步强调组织变革要实现"业务自驱化+管理平台化"，并通过"自主经营、责任封装"推动责任下沉。这反映亚威正在经历从传统管控型向平台赋能型的战略转型，急需培养具备<strong>经营思维</strong>和<strong>自主决策能力</strong>的中层干部。</li>
+<li>从<strong>2020年半年度运营会议</strong>可看出，<strong>冷总</strong>对"推动技术创新再结硕果"的焦虑远高于销售或管理。他指出"在四边折边机、三维五轴切割机、激光切管机、激光激光头、激光落料线等新产品研制和升级迭代上取得实质突破"，表明亚威正处在产品关键迭代期，技术研发人才缺口极大。</li>
+<li>值得关注的是，<strong>质量管控</strong>成为战略重点。《"链"动发展！亚威股份质量项目入选省质量强链优秀成果》显示，亚威通过"精密钣金件柔性折弯装备智能补偿技术攻关"，解决了"折弯装备精度依赖人工试折修正的问题"，这表明质量人才与技术人才的培养已成为战略级需求。</li>
+</ul>
+<h3>二、 场景研判：人才培养的实战化程度评估</h3>
+<ul>
+<li><strong>新员工培养机制</strong>显示出亚威正从"宣贯式"向"产出式"转变。培训负责人介绍的培养机制"涵盖集中培训与顶岗实习两阶段，并创新采用'师带徒+积分制'模式，辅以专人信息化跟踪管理"，这种模式已具备较强实战导向，但<strong>缺乏明确的技能认证标准</strong>和<strong>职业发展通道设计</strong>，可能导致培养效果评估困难。</li>
+<li>从<strong>2025届新入职毕业生</strong>欢迎活动看，亚威已建立系统化的文化融入机制，包括打卡互动、文化体验、职业规划等环节，<strong>人力资源总监刘俊伟</strong>作为主讲人强调了"诚、精、和、新"的企业精神。然而，活动内容仍偏重价值观传递，专业技能培训相对薄弱。</li>
+<li><strong>党员大会</strong>中的组织变革原则"双向选择，人才激活"值得关注。亚威试图通过"拓宽人才选拔渠道，优化干部人岗匹配；营造'赛马'文化，激发人才主观能动性"来打破传统人才流动障碍，但尚未形成具体的人才评价与激励机制，可能导致战略落地困难。</li>
+<li>亚威在<strong>技术人才培养</strong>方面已构建较为完善的体系。"牵头制定国家标准17项，其中已发布实施7项，主导起草4项"的成就表明公司已形成技术人才培养闭环。但在<strong>智能制造人才</strong>方面，《高档数控金属板材成形机床远程运维标准应用试点》仅停留在标准宣贯层面，缺乏系统性的数字化转型人才梯队建设。</li>
+</ul>
+<h3>三、 专业赋能：针对性能力升级建议</h3>
+<ul>
+<li>针对亚威在"精密钣金件柔性折弯装备智能补偿技术"等关键技术攻关中的痛点，建议开展<strong>技术专家培养计划</strong>。通过组建由技术骨干带领的创新攻关小组，将"师带徒+积分制"模式延伸至技术领域，建立技术难题与人才培养双轨并行的机制，解决技术传承断层风险。</li>
+<li>基于亚威正在推进的"业务自驱化+管理平台化"组织变革，建议构建<strong>经营型管理者培养体系</strong>。针对各业务单元负责人开展"经营模拟实战训练营"，通过模拟业务单元独立核算、自负盈亏的经营场景，培养其成本控制、市场响应和团队激励能力，为"自主经营、责任封装"的组织变革提供人才支撑。</li>
+<li>针对亚威向智能制造转型的战略需求，建议实施<strong>智能制造人才双轨制</strong>。一方面加强内部核心技术人员的数字化能力培养，如"机床远程运维服务平台"应用培训；另一方面引进智能制造高端人才，并建立"老带新"机制，确保传统制造人才与智能制造人才的有效融合，支撑"硬件+软件+云+集成+咨询"一体化解决方案的落地实施。</li>
+</ul>
+        </div>
+
+        <div class="footer">上海时代光华教育发展有限公司 S53 智库系统</div>
+    </div>
+</body>
+</html>
