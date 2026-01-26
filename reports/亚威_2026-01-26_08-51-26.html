@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root { --shida-blue: #1e3a8a; --shida-accent: #3b82f6; --bg: #f4f7fa; }
+        body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); margin: 0; padding: 40px 15px; color: #1e293b; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+        
+        .header { background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); padding: 40px; color: white; }
+        .header h1 { margin: 0; font-size: 26px; font-weight: 700; border-left: 4px solid #fff; padding-left: 15px; }
+
+        /* 纵向 Dataview 列表 */
+        .info-list {
+            margin: 30px 40px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+        .info-row {
+            display: flex;
+            padding: 20px 25px;
+            border-bottom: 1px solid #e2e8f0;
+            align-items: flex-start;
+        }
+        .info-row:last-child { border-bottom: none; }
+        
+        .info-label {
+            width: 100px;
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 600;
+            flex-shrink: 0;
+            padding-top: 5px;
+        }
+        .info-value {
+            flex-grow: 1;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--shida-blue);
+        }
+
+        /* 标签排版：去噪后的业务词汇 */
+        .tag-box { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag-pill {
+            background: white;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .tag-pill.high-weight {
+            background: rgba(30, 58, 138, 0.05);
+            color: var(--shida-blue);
+            border: 1.5px solid var(--shida-blue);
+            font-weight: 700;
+        }
+
+        .report-content { padding: 10px 40px 50px; }
+        h3 { color: var(--shida-blue); font-size: 22px; margin: 40px 0 20px; display: flex; align-items: center; }
+        h3::before { content: ""; width: 6px; height: 22px; background: var(--shida-accent); margin-right: 12px; border-radius: 3px; }
+        
+        li { margin-bottom: 15px; list-style: none; padding-left: 25px; position: relative; border-bottom: 1px dashed #f1f5f9; padding-bottom: 10px; }
+        li::before { content: "●"; color: var(--shida-accent); position: absolute; left: 0; font-size: 14px; }
+        
+        strong { 
+            color: var(--shida-blue); 
+            background: rgba(59, 130, 246, 0.1); 
+            padding: 2px 4px; 
+            border-radius: 4px; 
+            font-weight: 700; 
+        }
+
+        .footer { background: #f8fafc; padding: 25px; text-align: center; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; }
+
+        @media (max-width: 600px) {
+            .info-row { flex-direction: column; }
+            .info-label { margin-bottom: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>亚威 · 人才发展诊断报告</h1></div>
+        
+        <div class="info-list">
+            <div class="info-row">
+                <div class="info-label">样本总量</div>
+                <div class="info-value">26 篇原始情报</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">时间跨度</div>
+                <div class="info-value">2024 - 2026 年度</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">核心关注</div>
+                <div class="info-value">
+                    <div class="tag-box"><span class="tag-pill high-weight">生产/安全/质量/工艺等</span><span class="tag-pill high-weight">新员工</span><span class="tag-pill high-weight">公司高管</span><span class="tag-pill high-weight">智能制造</span><span class="tag-pill high-weight">企业文化</span><span class="tag-pill high-weight">公司党委</span><span class="tag-pill ">人力资源总监刘俊伟</span><span class="tag-pill ">产教融合</span><span class="tag-pill ">党建</span><span class="tag-pill ">不忘初心</span><span class="tag-pill ">2024届校招</span><span class="tag-pill ">招贤纳士</span><span class="tag-pill ">福利待遇</span><span class="tag-pill ">扬州东站</span><span class="tag-pill ">公司主楼大厅</span><span class="tag-pill ">诚、精、和、新企业精神</span><span class="tag-pill ">师带徒+积分制模式</span><span class="tag-pill ">协作筑塔</span><span class="tag-pill ">聚力前行</span><span class="tag-pill ">食堂共餐</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="report-content">
+            <h3>一、战略穿透：从高层意志看业务焦点</h3>
+<ul>
+  <li>根据情报显示，<strong>冷志斌</strong>董事长在2020年半年度运营会议中指出："当前宏观经济形势错综复杂，行业市场竞争加剧，需要我们对标先进同行，切实提高质量、提高效率、降低成本"，这反映了公司对效率提升的紧迫焦虑。与此相应，<strong>施金霞</strong>党委副书记在上届党委工作报告中强调"抓党建、建班子、带队伍、强素质、促经营、塑文化"，表明公司已将人才队伍建设置于战略核心位置。</li>
+  <li>值得注意的是，<strong>冷志斌</strong>在党员大会讲话中明确提出组织变革四大基本原则："业务驱动，平台管理"、"自主经营、责任封装"、"双向选择，人才激活"以及"共识共担，共创共享"。特别是"双向选择，人才激活"和"赛马文化"的表述，暴露出公司在人才激励机制和内部竞争环境建设上的深度思考，暗示可能存在人才活力不足的问题。</li>
+  <li>从智能制造战略角度看，<strong>冷志斌</strong>董事长强调公司"聚焦高端智能装备及系统解决方案业务领域，围绕金属成形机床、精密激光加工设备业务，坚定不移推动智能制造转型升级"，并结合公司被认定为"高档数控金属板材成形机床远程运维标准应用试点"项目来看，公司正积极推进数字化转型，但相关人才储备和能力建设可能是潜在痛点。</li>
+</ul>
+<h3>二、场景研判：人才培养的实战化程度评估</h3>
+<ul>
+  <li>新员工培养方面，公司建立了较为系统的"师带徒+积分制"培养模式，涵盖集中培训与顶岗实习两阶段，并辅以"专人信息化跟踪管理"。这一机制表明公司高度重视新员工快速融入和专业技能掌握，但从项目实施细节看，培养内容仍偏重"有人带、有人教"的基本保障层面，缺乏针对未来智能制造战略需求的前瞻性能力布局。</li>
+  <li>针对核心骨干人才，公司实施了<strong>第三期限制性股票激励计划</strong>，通过签字仪式"进一步增强激励对象的主体责任意识，确保其完成年度绩效指标"。这反映出公司对核心人才保留和激励的重视，但从激励范围仅限于"核心技术（业务）人员"来看，公司在关键人才保留方面可能面临挑战。</li>
+  <li>在专业能力建设上，公司建立了"三级检查制度，至下而上进行现场管理、主动管理"，并编制了《6S现场管理手册》，采用图文并茂形式向全体员工展示规范。但值得关注的是，<strong>冷志斌</strong>在运营会议上曾指出："精密钣金件柔性折弯装备智能补偿技术攻关，解决折弯装备精度依赖人工试折修正的问题，克服材料多样性和批量一致性差导致的折弯角度精度的不稳定性"，表明公司在关键技术领域仍存在人才瓶颈，可能影响智能制造战略的推进。</li>
+  <li>公司积极牵头组建"全国金属板材加工装备行业产教融合共同体"，但从情报看，产教融合更多体现在"培养更多适用型工程技术人才、实用型质量技术人才"层面，尚未形成针对智能制造战略需求的系统化人才培养体系，可能面临数字化转型的人才断层风险。</li>
+</ul>
+<h3>三、专业赋能：针对性能力升级建议</h3>
+<ul>
+  <li>基于公司智能制造转型的战略需求，建议针对关键业务领域如"高档数控金属板材成形机床远程运维"等，开展<strong>岗位经验萃取与知识管理系统建设项目</strong>。这一项目可聚焦解决公司提到的"折弯装备精度依赖人工试折修正"的技术瓶颈，将现有技术专家的隐性经验显性化、系统化，既解决当前人才断层风险，又为智能制造转型提供知识支撑。</li>
+  <li>针对公司组织变革中强调的"双向选择，人才激活"原则，建议设计<strong>人才发展与职业能力图谱建设项目</strong>。该项目可基于"师带徒+积分制"现有基础，进一步完善人才发展通道设计，特别是针对智能制造新业务领域的能力建模与发展路径规划，为公司"赛马文化"实施提供系统性支撑，激活组织内部人才活力。</li>
+  <li>鉴于公司已承担"全国锻压机械标准化技术委员会剪折分技术委员会秘书处"职责，并主导、参与制定<strong>17项国家标准</strong>（其中已发布实施7项，主导起草4项），建议强化<strong>标准引领型人才培养工程</strong>，重点培养一批既懂技术又懂标准的复合型人才。这不仅能支撑公司在行业中的领先地位，也能将标准制定能力转化为核心竞争力和人才吸引优势，有效应对"行业市场竞争加剧"的挑战。</li>
+</ul>
+        </div>
+
+        <div class="footer">上海时代光华教育发展有限公司 S53 智库系统</div>
+    </div>
+</body>
+</html>
