@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        :root { 
+            --shida-blue: #1e3a8a; /* 时代光华品牌深蓝 */
+            --shida-accent: #3b82f6; /* 活力蓝 */
+            --bg: #f4f7fa; 
+            --card-shadow: 0 12px 24px rgba(0,0,0,0.06);
+        }
+
+        body { 
+            font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            padding: 40px 15px; 
+            color: #1e293b; 
+            line-height: 1.8; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: var(--card-shadow); 
+            overflow: hidden; 
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* 顶部横幅：商务渐变 */
+        .header { 
+            background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); 
+            padding: 50px 40px; 
+            text-align: left; 
+            position: relative;
+        }
+        .header h1 { margin: 0; font-size: 28px; color: white; letter-spacing: 1px; }
+        .header::after { 
+            content: ""; 
+            position: absolute; 
+            bottom: 0; 
+            right: 0; 
+            width: 150px; 
+            height: 150px; 
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); 
+        }
+
+        /* 问答板块：卡片悬浮效果 */
+        .qa-section { 
+            margin: -30px 40px 40px; 
+            background: white; 
+            border-radius: 16px; 
+            padding: 30px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+            border: 1px solid #e2e8f0;
+            position: relative;
+            z-index: 10;
+        }
+        .qa-badge { 
+            display: inline-block; 
+            background: var(--shida-blue); 
+            color: white; 
+            padding: 4px 12px; 
+            border-radius: 6px; 
+            font-size: 12px; 
+            font-weight: bold; 
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .q-row { font-size: 18px; font-weight: 700; color: var(--shida-blue); margin-bottom: 15px; }
+        .a-box { 
+            background: #f8fafc; 
+            padding: 20px; 
+            border-radius: 12px; 
+            font-size: 15px; 
+            color: #334155; 
+            border-left: 5px solid var(--shida-accent);
+            white-space: pre-wrap;
+        }
+
+        /* 报告内容区 */
+        .report-content { padding: 0 50px 50px; }
+        
+        /* 针对数据概览的特殊排版 */
+        .report-content div[style*="background"] { 
+            background: #f1f5f9 !important; 
+            border: none !important; 
+            padding: 25px !important; 
+            border-radius: 12px !important;
+            margin: 20px 0 !important;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        h3 { 
+            color: var(--shida-blue); 
+            font-size: 22px; 
+            margin: 50px 0 20px; 
+            display: flex; 
+            align-items: center; 
+        }
+        h3::before { 
+            content: ""; 
+            width: 8px; 
+            height: 24px; 
+            background: var(--shida-accent); 
+            margin-right: 15px; 
+            border-radius: 4px;
+        }
+
+        /* 列表与高亮 */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; list-style-type: none; position: relative; }
+        li::before { content: "→"; color: var(--shida-accent); position: absolute; left: -25px; font-weight: bold; }
+        
+        /* 重点高亮：由单一底色升级为“下划线+微光”效果 */
+        strong { 
+            color: #b91c1c; 
+            background: linear-gradient(120deg, rgba(254,240,138,0.5) 0%, rgba(254,240,138,0.5) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 80%;
+            padding: 0 4px;
+        }
+
+        .footer { 
+            background: #f8fafc; 
+            padding: 30px; 
+            text-align: center; 
+            font-size: 12px; 
+            color: #64748b; 
+            border-top: 1px solid #e2e8f0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>亚威 · 客户情报侦察报告</h1>
+        </div>
+        
+        
+
+        <div class="report-content">
+            [DATA_OVERVIEW]：年度人才建设画像概览。亚威股份作为高端装备与智能制造解决方案供应商，自1956年创立以来，始终坚持"创新为引擎，实干为基石"的发展理念。公司从折弯机单项冠军成长为智能制造领军者，形成了以"诚、精、和、新"为核心的企业文化，并通过系统化的人才培养机制，为智能制造转型提供了有力支撑。
+<h3>一、组织能力与战略契合度观察</h3>
+<ul>
+    <li>亚威股份的人才培养体系高度契合"做世界一流的高端装备与智能制造解决方案供应商"的战略愿景，特别是在智能制造领域的人才储备与培养方面，为公司战略转型提供了坚实的人才基础。</li>
+    <li>组织变革坚持"业务驱动，平台管理"和"自主经营、责任封装"原则，通过集中共享的平台实现规模化和专业化，同时通过自主经营的业务单元保持灵活性与创新性，使人才发展与公司业务布局相互促进。</li>
+    <li>产教融合共同体建设与公司技术战略协同发展，通过"师带徒+积分制"培养模式，培养了一批既掌握传统工艺又具备智能制造素养的复合型人才，有效支持了公司在金属成形机床、精密激光加工设备等领域的技术突破。</li>
+</ul>
+<h3>二、人才培养亮点与实践复盘</h3>
+<ul>
+    <li>新员工培养体系创新实践：亚威股份建立了"集中培训+顶岗实习"的两阶段大学生培养机制，创新采用"师带徒+积分制"模式，辅以信息化跟踪管理，确保新员工快速掌握工作技能与岗位核心能力。人力资源总监刘俊伟在2025届新入职毕业生欢迎会上强调："脚下有泥——扎深技术的根；眼里有光——永葆创新的热情；心中有火——坚守制造人的担当"，体现了公司对人才培养的核心理念。</li>
+    <li>文化融入与团队建设双轨并行：公司为新员工精心设计系列活动，从车站接站的"亚威迎新专车"到"协作筑塔，聚力前行"的团队破冰活动，通过沉浸式体验传递亚威文化，助力新员工快速融入企业。其中"三角形底座+模块化拼接"的团队协作方式获得"最佳团队奖"，体现了公司重视实践创新的培养理念。</li>
+    <li>党建引领与人才发展深度融合：公司党委第二次党员大会上，冷志斌董事长强调"增强党员意识、发挥党员作用"，将人才培养与党建紧密结合，通过"不忘初心、牢记使命"主题教育，强化员工的思想信念和履职能力，为企业战略发展提供政治引领和组织保障。</li>
+</ul>
+<h3>三、未来人才能力成长建议</h3>
+<ul>
+    <li>加强数字化学习生态的闭环建设：随着公司入选江苏省质量强链优秀成果及智能制造标准应用试点项目，建议构建更加完善的数字化学习生态系统，整合线上线下学习资源，实现从学习到实践的闭环管理，培养员工在智能制造、远程运维、工业互联网等领域的专业能力，支撑公司"硬件+软件+云+集成+咨询"一体化解决方案的发展战略。</li>
+    <li>深化跨领域复合型人才培养：基于公司在金属板材加工装备行业的领先地位及产教融合共同体的建设基础，建议打破传统技术边界，促进机械工程、信息技术、数据科学等多学科交叉融合，培养既懂工艺又懂数据、既通技术又通管理的复合型人才，为公司向智能制造系统集成服务商转型提供人才保障。</li>
+    <li>构建敏捷型组织能力发展体系：面对行业竞争加剧和宏观经济形势复杂变化的挑战，建议打造更加敏捷的人才发展体系，强化"共识共担，共创共享"的组织文化，通过赛马机制激活人才创新活力，培养员工的研判大势能力、把握机遇能力和初心不改定力，提升企业应对市场变化的整体韧性。</li>
+</ul>
+        </div>
+
+        <div class="footer">
+            上海时代光华 S53 业务部 · 数字化智库系统
+        </div>
+    </div>
+</body>
+</html>
