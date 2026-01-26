@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>亚威 · 人才发展诊断报告</title>
+    <style>
+        :root { 
+            --shida-blue: #1e3a8a; /* 时代光华品牌深蓝 */
+            --shida-accent: #3b82f6; /* 活力蓝 */
+            --bg: #f4f7fa; 
+            --border-color: #e2e8f0;
+        }
+
+        body { 
+            font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            padding: 40px 15px; 
+            color: #1e293b; 
+            line-height: 1.8; 
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: 0 12px 24px rgba(0,0,0,0.06); 
+            overflow: hidden; 
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* 顶部横幅：商务渐变 */
+        .header { 
+            background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); 
+            padding: 50px 40px; 
+            text-align: left; 
+        }
+        .header h1 { 
+            margin: 0; 
+            font-size: 28px; 
+            color: white; 
+            letter-spacing: 1px; 
+            font-weight: 700;
+        }
+
+        /* 数据概览区：对标奥特佳 Grid 结构 */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            background: #f8fafc;
+            padding: 30px 20px;
+            border-radius: 12px;
+            margin: 30px 40px 40px;
+            border: 1px solid var(--border-color);
+        }
+        .ov-item {
+            text-align: center;
+            border-right: 1px solid #cbd5e1;
+        }
+        .ov-item:last-child {
+            border-right: none;
+        }
+        .ov-item strong {
+            display: inline-block;
+            background: none !important;
+            box-shadow: none !important;
+            color: #64748b !important;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .ov-item span {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--shida-blue);
+            padding: 0 10px;
+            word-break: break-all;
+        }
+
+        /* 报告内容区 */
+        .report-content { padding: 0 50px 50px; }
+
+        h3 { 
+            color: var(--shida-blue); 
+            font-size: 22px; 
+            margin: 50px 0 20px; 
+            display: flex; 
+            align-items: center; 
+        }
+        h3::before { 
+            content: ""; 
+            width: 6px; 
+            height: 24px; 
+            background: var(--shida-accent); 
+            margin-right: 15px; 
+            border-radius: 3px;
+        }
+
+        /* 列表与高亮 */
+        ul { padding-left: 0; margin: 20px 0; }
+        li { 
+            margin-bottom: 15px; 
+            list-style-type: none; 
+            position: relative; 
+            padding-left: 25px;
+        }
+        li::before { 
+            content: "●"; 
+            color: var(--shida-accent); 
+            position: absolute; 
+            left: 0; 
+            font-size: 14px;
+            top: -2px;
+        }
+        
+        /* 重点高亮样式：商务级视觉，解决错位与重叠 */
+        strong { 
+            color: var(--shida-blue);
+            background: rgba(59, 130, 246, 0.1); 
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-weight: 700;
+            box-shadow: inset 0 -2px 0 rgba(59, 130, 246, 0.2);
+            white-space: pre-wrap;
+        }
+
+        .footer { 
+            background: #f8fafc; 
+            padding: 30px; 
+            text-align: center; 
+            font-size: 12px; 
+            color: #64748b; 
+            border-top: 1px solid var(--border-color); 
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 650px) {
+            .overview-grid { grid-template-columns: 1fr; }
+            .ov-item { border-right: none; border-bottom: 1px solid var(--border-color); padding: 15px 0; }
+            .ov-item:last-child { border-bottom: none; }
+            .report-content { padding: 0 25px 30px; }
+            .header { padding: 40px 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>亚威 · 人才发展与组织效能观察报告</h1>
+        </div>
+        
+        <div class="overview-grid">
+            <div class="ov-item"><strong>样本总量</strong><br><span>26 篇</span></div>
+            <div class="ov-item"><strong>时间跨度</strong><br><span>2024 - 2026 (近100条)</span></div>
+            <div class="ov-item"><strong>高频标签</strong><br><span>亚威股份 | 生产/安全/质量/工艺等 | 新员工 | 公司高管 | 智能制造 | 企业文化 | 公司党委 | 江苏亚威机床股份有限公司 | 人力资源总监刘俊伟 | 产教融合</span></div>
+        </div>
+
+        <div class="report-content">
+            <h3>一、 战略穿透：高层意志与业务焦点的映射</h3>
+<ul>
+<li><strong>智能制造战略焦虑</strong>：董事长冷志斌在多个场合强调"推动智能制造转型升级"，聚焦"高端智能装备及系统解决方案业务领域"，推行"硬件+软件+云+集成+咨询"一体化解决方案。这一战略意志直接反映在人才培养上，如入选"2022年度智能制造标准应用试点项目"，开展机床远程运维服务平台建设升级。</li>
+<li><strong>技术创新突破压力</strong>：冷志斌明确提出"推动技术创新再结硕果"，公司在四边折边机、三维五轴切割机等新产品研制上寻求实质突破。为此，公司建立了"师带徒+积分制"培养机制，强化核心技术能力培养，体现了对技术人才断层风险的警觉。</li>
+<li><strong>组织变革转型决心</strong>：公司提出四大组织变革原则："业务驱动，平台管理"；"自主经营、责任封装"；"双向选择，人才激活"；"共识共担，共创共享"。并实施多期限制性股票激励计划，这显示公司试图通过机制创新激活组织活力，应对规模扩大带来的管理挑战。</li>
+<li><strong>质量安全管理强化</strong>：获评"全国安康杯竞赛优胜单位称号"，构建"一级抓一级、层层抓落实"的责任体系，累计开展安全检查1200余人次。这反映公司在业务扩张中对安全与质量控制的深层次焦虑，倒逼人才培训向实操能力提升倾斜。</li>
+</ul>
+<h3>二、 场景研判：人才培养的实战化程度评估</h3>
+<ul>
+<li><strong>从"宣贯式"到"产出式"的转变</strong>：亚威新员工培训已超越传统宣讲模式，采用"师带徒+积分制"与专人信息化跟踪管理，确保"新员工有人带、有人教"。通过顶岗实习与集中培训两阶段设计，特别是"协作筑塔，聚力前行"等实践项目，培养团队协作能力，展现了产出式培训特点。</li>
+<li><strong>业务导向的实战考核</strong>：公司推行6S现场管理提升工程，建立三级检查制度，从"现场管理"到"主动管理"的转变，形成闭环管理。培训考核直接与生产现场问题解决挂钩，如"精密钣金件柔性折弯装备智能补偿技术攻关"等实际项目，验证培训成果。</li>
+<li><strong>标准化与体系化建设</strong>：编制《6S现场管理手册》，采用图文并茂形式展示规范，使执行有标准，检查有依据。这种标准化知识传递方式，体现了亚威培训体系的成熟度，同时也降低了人才流失带来的知识断层风险。</li>
+<li><strong>多层次人才培养架构</strong>：针对不同层级人才设计差异化培养方案。新员工聚焦融入与基础技能，核心骨干通过股权激励强化责任意识，而全国金属板材加工装备行业产教融合共同体的建立，则显示了公司对产业生态人才供应链的前瞻布局。</li>
+</ul>
+<h3>三、 专业赋能：前瞻性能力成长建议</h3>
+<ul>
+<li><strong>智能制造复合型人才培养</strong>：针对亚威"硬件+软件+云+集成+咨询"一体化战略，建议推进"制造工程师+数字技术专家"双轨能力培养模式。通过业务赋能逻辑：将现有智能制造项目中的技术难题转化为人才培养场景，在解决实际业务挑战的过程中培养既懂设备又懂数据的复合型人才，缓解智能制造业务扩张带来的人才断层风险。</li>
+<li><strong>知识资产管理与传承体系</strong>：围绕公司近70年发展积累的技术工艺与管理创新，建议建立系统化的知识萃取与传承机制。通过业务赋能逻辑：将关键技术专家的隐性经验显性化，开发"亚威知识库"，结合6S现场管理的实践经验，形成可复制、可传承的知识资产，降低人才流动对企业核心能力的冲击。</li>
+<li><strong>创新思维与技术预见能力</strong>：面对行业竞争加剧与快速变化的客户需求，建议培养团队的创新思维与技术预见能力。通过业务赋能逻辑：建立"未来技术预见"培训机制，定期开展行业趋势研判工作坊，结合亚威参与的17项国家标准制定经验，培养团队系统性思考能力与前瞻布局意识，使人才发展与公司战略保持同频共振。</li>
+</ul>
+        </div>
+
+        <div class="footer">
+            上海时代光华管理学院 S53 智库系统 · 数字化人才画像分析
+        </div>
+    </div>
+</body>
+</html>
