@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root { --shida-blue: #1e3a8a; --shida-accent: #3b82f6; --bg: #f4f7fa; }
+        body { font-family: "PingFang SC", sans-serif; background: var(--bg); margin: 0; padding: 40px 15px; color: #1e293b; line-height: 1.8; }
+        .container { max-width: 900px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 12px 24px rgba(0,0,0,0.06); overflow: hidden; }
+        .header { background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); padding: 50px 40px; color: white; }
+        .header h1 { margin: 0; font-size: 28px; font-weight: 700; }
+
+        /* 对标奥特佳：强制三列 Grid 布局 */
+        .overview-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+            background: #f8fafc; padding: 30px 20px; border-radius: 12px;
+            margin: 30px 40px 40px; border: 1px solid #e2e8f0;
+        }
+        .ov-item { text-align: center; border-right: 1px solid #cbd5e1; }
+        .ov-item:last-child { border-right: none; }
+        .ov-item strong { display: inline-block; background: none !important; box-shadow: none !important; color: #64748b !important; font-size: 13px; text-transform: uppercase; margin-bottom: 8px; }
+        .ov-item span { display: block; font-size: 16px; font-weight: 700; color: var(--shida-blue); padding: 0 10px; word-break: break-all; }
+
+        .report-content { padding: 0 50px 50px; }
+        h3 { color: var(--shida-blue); font-size: 22px; margin: 40px 0 20px; display: flex; align-items: center; }
+        h3::before { content: ""; width: 6px; height: 22px; background: var(--shida-accent); margin-right: 12px; border-radius: 3px; }
+        li { margin-bottom: 12px; list-style: none; padding-left: 25px; position: relative; }
+        li::before { content: "●"; color: var(--shida-accent); position: absolute; left: 0; }
+        
+        /* 正文商务蓝高亮 */
+        strong { color: var(--shida-blue); background: rgba(59, 130, 246, 0.1); padding: 1px 4px; border-radius: 3px; font-weight: 700; box-shadow: inset 0 -2px 0 rgba(59, 130, 246, 0.2); }
+        .footer { background: #f8fafc; padding: 30px; text-align: center; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0; }
+
+        @media (max-width: 650px) { .overview-grid { grid-template-columns: 1fr; } .ov-item { border-right: none; border-bottom: 1px solid #e2e8f0; padding: 15px 0; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>亚威 · 人才发展诊断报告</h1></div>
+        <div class="overview-grid">
+            <div class="ov-item"><strong>样本总量</strong><br><span>26 篇</span></div>
+            <div class="ov-item"><strong>时间跨度</strong><br><span>2024 - 2026 (近100条)</span></div>
+            <div class="ov-item"><strong>高频标签</strong><br><span>亚威股份 | 生产/安全/质量/工艺等 | 新员工 | 公司高管 | 智能制造 | 企业文化 | 公司党委 | 江苏亚威机床股份有限公司 | 人力资源总监刘俊伟 | 产教融合</span></div>
+        </div>
+        <div class="report-content"><h3>一、战略穿透：高层意志与业务焦点的映射</h3>
+<p>通过对亚威股份高层领导讲话的深度解读，可清晰识别其核心战略焦虑及对人才工作的直接影响。公司董事长冷志斌多次强调"脚下有泥—扎深技术的根；眼里有光—永葆创新的热情；心中有火—坚守制造人的担当"，揭示了亚威从传统机床制造向智能制造解决方案提供商转型的战略决心。</p>
+<p>冷志斌在2024年第二次党员大会上的讲话中明确提出组织变革的四大基本原则："业务驱动，平台管理"、"自主经营、责任封装"、"双向选择，人才激活"和"共识共担，共创共享"。这反映了公司正经历深刻的组织架构重构，需要大量适应新模式的管理人才。</p>
+<p>刘俊伟人力资源总监主导的"师带徒+积分制"培养模式，则体现了公司在人才梯队建设上的焦虑。从2025届新员工培养体系的投入力度来看，公司急需培养能够支撑智能制造转型的人才队伍，特别是具备数字化、智能化能力的高端技术人才。</p>
+<p>这些战略焦虑直接影响了培训资源分配：大量资源向智能制造相关倾斜，如远程运维技术、工业互联网应用等；增强技术创新能力培养，重点突破四边折边机、三维五轴切割机等新产品研发；通过系统化组织变革培训，推动员工适应新的管理模式。</p>
+<h3>二、场景研判：人才培养的实战化程度评估</h3>
+<p>亚威股份的人才培养体系呈现出"宣贯式"与"产出式"并存的特点，不同项目的实战化程度存在明显差异。</p>
+<p>在新员工培养方面，"师带徒+积分制"模式显示出较高实战化程度。培训负责人设计的集中培训与顶岗实习两阶段培养，辅以专人信息化跟踪管理，确保新员工"有人带、有人教，快速掌握工作技能与岗位核心能力"。这种模式将学习与工作紧密结合，体现了以产出为导向的培养思路。</p>
+<p>在质量管理领域，"6S现场管理提升工程"同样展现较高实战化水平。通过建立三级检查制度，编制《6S现场管理手册》，"使执行有标准，检查有依据，养成习惯，提高员工素养"，形成了一套可复制、可考核的管理体系。</p>
+<p>然而，团队建设项目如"协作筑塔，聚力前行"主题活动则相对传统，通过报纸塔动手实践促进团队融合，但缺乏与实际业务场景的直接关联。党员领导干部培训主要围绕政治理论学习，实战化程度不足。</p>
+<p>总体而言，亚威股份在核心技术岗位和生产管理领域的培训较为"产出式"，而在一般员工培训和党员干部培训方面则偏向"宣贯式"。公司已开始重视培训与业务实际的结合，但仍缺乏系统性的实战化人才培养体系。</p>
+<h3>三、专业赋能：前瞻性能力成长建议</h3>
+<p>基于亚威股份的战略转型和组织变革需求，建议从以下三个方向赋能人才发展与组织效能提升：</p>
+<ul>
+  <li><strong>智能制造转型专项能力构建计划</strong>：针对亚威从"折弯机单项冠军到智能制造领军者"的战略转型，建议系统构建智能制造相关能力图谱，包括工业互联网、远程运维、智能工厂规划等核心能力。采用"问题导向+项目实战"的培养方式，围绕实际业务中的智能制造转型痛点设计培训项目，建立智能制造专家认证体系，将培训与职业发展通道紧密结合。</li>
+  <li><strong>核心技术岗位经验萃取与传承计划</strong>：针对亚威高端装备研发的技术瓶颈，建议系统开展核心技术岗位的经验萃取工作，将专家经验和隐性知识转化为可传承的显性知识。建立企业内部的技术知识库和案例库，通过"专家-学员"结对子方式，实现核心技术能力的有效传承。同时开展关键技术攻关项目攻关，以战代练，培养一批能够解决实际技术难题的创新型人才。</li>
+  <li><strong>组织变革背景下的领导力发展计划</strong>：针对亚威"业务驱动，平台管理"、"自主经营、责任封装"等组织变革需求，建议开展针对性的领导力发展项目。设计"平台型管理者"和"业务型经营者"双轨培养路径，适应新的组织架构需求。建立变革管理能力模型，帮助管理者适应并推动组织变革，提升组织效能，特别是强化中高层干部对"共识共担，共创共享"理念的理解和执行能力。</li>
+</ul></div>
+        <div class="footer">上海时代光华教育发展有限公司 S53 智库系统</div>
+    </div>
+</body>
+</html>
