@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root { 
+            --shida-blue: #1e3a8a; 
+            --shida-accent: #3b82f6; 
+            --bg: #f4f7fa; 
+        }
+
+        body { 
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif; 
+            background: var(--bg); 
+            margin: 0; padding: 40px 15px; color: #1e293b; line-height: 1.8; 
+        }
+
+        .container { 
+            max-width: 900px; margin: 0 auto; background: white; border-radius: 20px; 
+            box-shadow: 0 12px 24px rgba(0,0,0,0.06); overflow: hidden; 
+        }
+
+        .header { 
+            background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); 
+            padding: 50px 40px; color: white;
+        }
+        .header h1 { margin: 0; font-size: 28px; letter-spacing: 1px; }
+
+        /* 对标奥特佳：DataView 网格结构 */
+        .overview-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;
+            background: #f8fafc; padding: 25px; border-radius: 12px;
+            margin: 20px 0 40px; border: 1px solid #e2e8f0;
+        }
+        .ov-item { text-align: center; border-right: 1px solid #e2e8f0; }
+        .ov-item:last-child { border-right: none; }
+        .ov-item strong { background: none !important; color: #64748b !important; font-size: 13px; box-shadow: none !important; }
+        .ov-item span { display: block; margin-top: 8px; font-size: 16px; font-weight: 700; color: var(--shida-blue); }
+
+        .report-content { padding: 0 50px 50px; }
+
+        h3 { 
+            color: var(--shida-blue); font-size: 22px; margin: 40px 0 20px; 
+            display: flex; align-items: center; 
+        }
+        h3::before { 
+            content: ""; width: 6px; height: 22px; background: var(--shida-accent); 
+            margin-right: 12px; border-radius: 3px;
+        }
+
+        ul { padding-left: 0; }
+        li { 
+            margin-bottom: 12px; list-style: none; padding-left: 25px; position: relative; 
+        }
+        li::before { 
+            content: "●"; color: var(--shida-accent); position: absolute; left: 0; font-size: 12px; 
+        }
+        
+        /* 商务级高亮效果 */
+        strong { 
+            color: var(--shida-blue);
+            background: rgba(59, 130, 246, 0.1); 
+            padding: 1px 4px; border-radius: 3px; font-weight: 700;
+            box-shadow: inset 0 -2px 0 rgba(59, 130, 246, 0.2);
+        }
+
+        .footer { 
+            background: #f8fafc; padding: 30px; text-align: center; 
+            font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0; 
+        }
+
+        @media (max-width: 600px) {
+            .overview-grid { grid-template-columns: 1fr; }
+            .ov-item { border-right: none; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>亚威 · 数字化人才发展观察简报</h1>
+        </div>
+        <div class="report-content">
+            <div class="overview-grid">
+  <div class="ov-item"><strong>样本总量</strong><br><span>26 篇</span></div>
+  <div class="ov-item"><strong>时间跨度</strong><br><span>2024 - 2026 (近100条)</span></div>
+  <div class="ov-item"><strong>核心关注</strong><br><span>亚威股份 | 生产/安全/质量/工艺等 | 新员工 | 公司高管 | 智能制造 | 企业文化 | 公司党委 | 江苏亚威机床股份有限公司 | 人力资源总监刘俊伟 | 产教融合</span></div>
+</div>
+<h3>一、组织能力与战略契合度观察</h3>
+<ul>
+  <li>亚威股份历经69年发展，始终以"做世界一流的高端装备与智能制造解决方案供应商"为愿景，从折弯机单项冠军成长为智能制造领军者，其人才培养体系紧密结合了企业战略发展方向。</li>
+  <li>公司组织变革坚持"业务驱动，平台管理"原则，通过"自主经营、责任封装"和"双向选择，人才激活"机制，有效支撑了企业"硬件+软件+云+集成+咨询"一体化解决方案的战略布局。</li>
+  <li>在智能制造转型升级过程中，企业通过建设机床远程运维服务平台，完善全生命周期服务体系，验证了人才培养与技术创新协同推进的组织效能。</li>
+</ul>
+<h3>二、人才培养亮点与实践复盘</h3>
+<ul>
+  <li><strong>新员工培养体系的实战化设计</strong>：亚威股份创新采用"师带徒+积分制"培养模式，结合集中培训与顶岗实习两阶段，辅以专人信息化跟踪管理。董事长寄语"脚下有泥——扎深技术的根；眼里有光——永葆创新的热情；心中有火——坚守制造人的担当"，充分体现了企业对技术根基与创新精神的重视，培养体系高度契合企业战略需求。</li>
+  <li><strong>质量人才与产业协同培养</strong>：亚威股份牵头成立全国金属板材加工装备行业产教融合共同体，建设金属板材智能装备创新实践中心，成功培养适用型工程技术人才与质量技术人才，促进了产业链质量协同提升，"离散型制造行业供应链质量协同提升模式"项目入选江苏省质量强链优秀成果。</li>
+  <li><strong>长效激励机制与文化建设</strong>：通过实施第三期限制性股票激励计划，有效提升了核心骨干人员的积极性和创造性，增强了核心团队凝聚力和企业核心竞争力。同时，通过打造书香企业、创办青年学习社、筹建员工图书角等活动，营造了"诚、精、和、新"的企业文化氛围，荣获"江苏省五四红旗团委"称号。</li>
+</ul>
+<h3>三、未来人才能力成长建议</h3>
+<ul>
+  <li><strong>加强智能制造复合型人才培养</strong>：随着亚威股份向智能制造领军者转型，建议加强具备机械工程、信息技术和人工智能交叉能力的复合型人才培养，以支持企业在"四边折边机、三维五轴切割机、激光切管机"等高端智能装备研发领域的突破，培养更多"单项冠军"产品。</li>
+  <li><strong>构建数字化学习生态闭环</strong>：建议加强数字化学习生态的闭环建设，将企业的机床远程运维服务平台标准应用与人才培养相结合，建立"线上学习-实践应用-反馈改进"的持续学习机制，促进员工在精密钣金件柔性折弯装备智能补偿技术等领域的专业能力提升。</li>
+  <li><strong>推动创新思维与跨界融合能力发展</strong>：面对行业转型升级趋势，建议通过项目制学习、创新工作坊等形式，培养员工的创新思维和跨界融合能力，推动"个性化定制、柔性化生产"理念落地，提升企业应对复杂多变市场环境的适应能力和创新能力。</li>
+</ul>
+        </div>
+        <div class="footer">
+            上海时代光华管理学院 S53 智库系统
+        </div>
+    </div>
+</body>
+</html>
