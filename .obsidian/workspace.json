@@ -13,10 +13,10 @@
             "state": {
               "type": "html-view",
               "state": {
-                "file": "reports/中国能建_2026-01-23_08-51-29.html"
+                "file": "reports/亚威_2026-01-26_08-05-26.html"
               },
               "icon": "code-glyph",
-              "title": "中国能建_2026-01-23_08-51-29"
+              "title": "亚威_2026-01-26_08-05-26"
             }
           }
         ]
@@ -192,10 +192,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "11cda4f9e07cd9a0",
+  "active": "dda6cdf02232235c",
   "lastOpenFiles": [
-    "reports/亚威_2026-01-26_08-00-11.html",
     "reports/中国能建_2026-01-23_08-51-29.html",
+    "reports/亚威_2026-01-26_08-05-26.html",
+    "reports/亚威_2026-01-26_08-00-11.html",
     "reports/亚威_2026-01-26_07-51-24.html",
     "reports/亚威_2026-01-26_07-40-59.html",
     "reports/亚威_2026-01-26_07-29-33.html",
@@ -204,7 +205,6 @@
     "reports/盛世精密_2026-01-22_02-52-26.html",
     "reports/泉峰_2026-01-22_03-29-57.html",
     "reports/奥特佳_2026-01-22_03-05-15.html",
-    "reports/天加空调_2026-01-22_02-57-45.html",
     "conflict-files-obsidian-git.md",
     "README.md"
   ]
