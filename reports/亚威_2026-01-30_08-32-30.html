@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root { --shida-blue: #1e3a8a; --shida-accent: #3b82f6; --bg: #f4f7fa; }
+        body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); margin: 0; padding: 40px 15px; color: #1e293b; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+        
+        .header { background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); padding: 40px; color: white; }
+        .header h1 { margin: 0; font-size: 26px; font-weight: 700; border-left: 4px solid #fff; padding-left: 15px; }
+
+        /* 纵向 Dataview 列表 */
+        .info-list {
+            margin: 30px 40px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+        .info-row {
+            display: flex;
+            padding: 20px 25px;
+            border-bottom: 1px solid #e2e8f0;
+            align-items: flex-start;
+        }
+        .info-row:last-child { border-bottom: none; }
+        
+        .info-label {
+            width: 100px;
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 600;
+            flex-shrink: 0;
+            padding-top: 5px;
+        }
+        .info-value {
+            flex-grow: 1;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--shida-blue);
+        }
+
+        /* 标签排版：去噪后的业务词汇 */
+        .tag-box { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag-pill {
+            background: white;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .tag-pill.high-weight {
+            background: rgba(30, 58, 138, 0.05);
+            color: var(--shida-blue);
+            border: 1.5px solid var(--shida-blue);
+            font-weight: 700;
+        }
+
+        .report-content { padding: 10px 40px 50px; }
+        h3 { color: var(--shida-blue); font-size: 22px; margin: 40px 0 20px; display: flex; align-items: center; }
+        h3::before { content: ""; width: 6px; height: 22px; background: var(--shida-accent); margin-right: 12px; border-radius: 3px; }
+        
+        li { margin-bottom: 15px; list-style: none; padding-left: 25px; position: relative; border-bottom: 1px dashed #f1f5f9; padding-bottom: 10px; }
+        li::before { content: "●"; color: var(--shida-accent); position: absolute; left: 0; font-size: 14px; }
+        
+        strong { 
+            color: var(--shida-blue); 
+            background: rgba(59, 130, 246, 0.1); 
+            padding: 2px 4px; 
+            border-radius: 4px; 
+            font-weight: 700; 
+        }
+
+        .footer { background: #f8fafc; padding: 25px; text-align: center; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; }
+
+        @media (max-width: 600px) {
+            .info-row { flex-direction: column; }
+            .info-label { margin-bottom: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>亚威 · 人才发展诊断报告</h1></div>
+        
+        <div class="info-list">
+            <div class="info-row">
+                <div class="info-label">样本总量</div>
+                <div class="info-value">26 篇原始情报</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">时间跨度</div>
+                <div class="info-value">2024 - 2026 年度</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">核心关注</div>
+                <div class="info-value">
+                    <div class="tag-box"><span class="tag-pill high-weight">生产/安全/质量/工艺等</span><span class="tag-pill high-weight">新员工</span><span class="tag-pill high-weight">公司高管</span><span class="tag-pill high-weight">智能制造</span><span class="tag-pill high-weight">企业文化</span><span class="tag-pill high-weight">公司党委</span><span class="tag-pill ">人力资源总监刘俊伟</span><span class="tag-pill ">产教融合</span><span class="tag-pill ">党建</span><span class="tag-pill ">不忘初心</span><span class="tag-pill ">2024届校招</span><span class="tag-pill ">招贤纳士</span><span class="tag-pill ">福利待遇</span><span class="tag-pill ">扬州东站</span><span class="tag-pill ">公司主楼大厅</span><span class="tag-pill ">诚、精、和、新企业精神</span><span class="tag-pill ">师带徒+积分制模式</span><span class="tag-pill ">协作筑塔</span><span class="tag-pill ">聚力前行</span><span class="tag-pill ">食堂共餐</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="report-content">
+            <h3>一、 战略穿透：从冷志斌书记“四个不”的政治宣示，看亚威组织变革的临界点</h3>
+<p>2024年6月15日，在中共江苏亚威机床股份有限公司委员会第二次党员大会现场，新当选的党委书记、董事长、总经理<strong>冷志斌</strong>同志代表新一届党委作出郑重承诺：“解放思想、开拓创新、求真务实、克难而进”，并首次系统提出组织变革“四大原则”——业务驱动、平台管理、自主经营、责任封装。这并非泛泛而谈的管理口号，而是对当前战略承压点的精准切片：<strong>“面对困难不焦躁”“面对机会不懈怠”“面对诱惑不逐利”“面对小成不自傲”</strong>——四组排比句直指亚威从“折弯机单项冠军”迈向“智能制造领军者”过程中的深层焦虑：技术迭代加速倒逼响应机制重构、供应链质量协同升级亟需能力穿透、产教融合落地呼唤人才供给闭环。证据链高度闭环：在2025届迎新现场，<strong>人力资源总监刘俊伟</strong>以9时45分精准计时开启欢迎会，并在致辞中三次强调“69年”“创新引擎”“实干基石”，其背后是公司党委将“不忘初心、牢记使命”具象为“咬定战略目标不动摇”的政治执行力；而在2020年半年度运营会议上，<strong>冷志斌</strong>已明确将“推动实物质量持续改善”与“安全生产和职业健康安全的管理”并列列为四大攻坚方向之一，印证安全与质量早已不是后台支撑项，而是与销售、技术同等权重的战略前哨。</p>
+<h3>二、 场景研判：“师带徒+积分制”不是培训模式，而是组织能力沉淀的战术接口</h3>
+<p>贵司在<strong>2025届新入职毕业生</strong>培养中启用的“师带徒+积分制”模式，绝非传统意义上的带教安排。我们注意到其配套动作极具深意：一是全程专人信息化跟踪管理，二是与集中培训、顶岗实习形成刚性两阶段闭环，三是嵌入“协作筑塔，聚力前行”破冰活动——第七队凭借“<strong>三角形底座+模块化拼接</strong>”结构夺冠，该设计语言恰恰映射亚威智能装备研发中对结构稳定性与柔性扩展性的双重追求。更关键的是，这一模式被置于“公司主楼大厅”“扬州东站”“食堂共餐”等真实物理空间中运行，而非封闭教室。这说明亚威的人才发展已进入“场景即考场”阶段：当新员工在<strong>扬州东站</strong>被身着工装、举着标识牌的接站人员迎接时，他们接收的第一课是企业服务标准；当在<strong>公司主楼大厅</strong>打卡“以青春之名，赴亚威之约”KT板时，完成的是文化认同的首次行为确认；当在<strong>食堂共餐</strong>中听往届代表邱建春分享“平衡工作生活”经验时，组织隐性规则已完成传递。这种将培养颗粒度下沉至“分钟级触点”的设计，远超常规宣贯式培训，本质是把人才成长锚定在“产线节奏、客户响应、跨部门协作”三大实战坐标上。</p>
+<h3>三、 专业赋能：建议以“标准—人才—产线”铁三角为支点，启动三项组织能力建设</h3>
+<ul>
+<li>聚焦<strong>全国金属板材加工装备行业产教融合共同体</strong>落地实效，建议开展“标准反哺人才”专项行动：将贵司已主导起草的<strong>4项国家标准</strong>、参与制定的<strong>17项国家标准</strong>转化为岗位能力图谱，萃取“精密钣金件柔性折弯装备智能补偿技术攻关”等真实项目中的决策逻辑、试错路径、跨域协作节点，形成可复用的“标准应用案例包”，解决产教融合中院校教学与企业实战脱节的核心痛点；</li>
+<li>针对<strong>供应链质量协同提升模式</strong>入选江苏省质量强链优秀成果的实践，建议构建“供应商工程师联合认证计划”：以亚威质量管控平台数据为基，设计供应商技术人员与亚威工艺/质量工程师的混编实训单元，通过“派驻专家帮扶”机制反向输出亚威的质量方法论，将外部伙伴纳入组织能力共建体系；</li>
+<li>呼应<strong>冷志斌</strong>书记提出的“双向选择、人才激活”机制，建议在<strong>第三期限制性股票激励计划</strong>框架下，增设“组织效能改进积分”：将“6S现场管理提升工程”中形成的三级检查制度、行迹管理法等管理资产，转化为激励对象可认领、可量化、可兑现的改进任务，使股权激励从财务工具升维为组织进化杠杆。</li>
+</ul>
+        </div>
+
+        <div class="footer">上海时代光华教育发展有限公司 S53 智库系统</div>
+    </div>
+</body>
+</html>
