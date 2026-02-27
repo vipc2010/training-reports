@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root { --shida-blue: #1e3a8a; --shida-accent: #3b82f6; --bg: #f4f7fa; }
+        body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); margin: 0; padding: 40px 15px; color: #1e293b; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+        
+        .header { background: linear-gradient(135deg, var(--shida-blue) 0%, #1d4ed8 100%); padding: 40px; color: white; }
+        .header h1 { margin: 0; font-size: 26px; font-weight: 700; border-left: 4px solid #fff; padding-left: 15px; }
+
+        /* 纵向 Dataview 列表 */
+        .info-list {
+            margin: 30px 40px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+        .info-row {
+            display: flex;
+            padding: 20px 25px;
+            border-bottom: 1px solid #e2e8f0;
+            align-items: flex-start;
+        }
+        .info-row:last-child { border-bottom: none; }
+        
+        .info-label {
+            width: 100px;
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 600;
+            flex-shrink: 0;
+            padding-top: 5px;
+        }
+        .info-value {
+            flex-grow: 1;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--shida-blue);
+        }
+
+        /* 标签排版：去噪后的业务词汇 */
+        .tag-box { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag-pill {
+            background: white;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .tag-pill.high-weight {
+            background: rgba(30, 58, 138, 0.05);
+            color: var(--shida-blue);
+            border: 1.5px solid var(--shida-blue);
+            font-weight: 700;
+        }
+
+        .report-content { padding: 10px 40px 50px; }
+        h3 { color: var(--shida-blue); font-size: 22px; margin: 40px 0 20px; display: flex; align-items: center; }
+        h3::before { content: ""; width: 6px; height: 22px; background: var(--shida-accent); margin-right: 12px; border-radius: 3px; }
+        
+        li { margin-bottom: 15px; list-style: none; padding-left: 25px; position: relative; border-bottom: 1px dashed #f1f5f9; padding-bottom: 10px; }
+        li::before { content: "●"; color: var(--shida-accent); position: absolute; left: 0; font-size: 14px; }
+        
+        strong { 
+            color: var(--shida-blue); 
+            background: rgba(59, 130, 246, 0.1); 
+            padding: 2px 4px; 
+            border-radius: 4px; 
+            font-weight: 700; 
+        }
+
+        .footer { background: #f8fafc; padding: 25px; text-align: center; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; }
+
+        @media (max-width: 600px) {
+            .info-row { flex-direction: column; }
+            .info-label { margin-bottom: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>中国能建 · 人才发展诊断报告</h1></div>
+        
+        <div class="info-list">
+            <div class="info-row">
+                <div class="info-label">样本总量</div>
+                <div class="info-value">490 篇原始情报</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">时间跨度</div>
+                <div class="info-value">2024 - 2026 年度</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">核心关注</div>
+                <div class="info-value">
+                    <div class="tag-box"><span class="tag-pill high-weight">管理</span><span class="tag-pill high-weight">线上直播</span><span class="tag-pill high-weight">人力资源部</span><span class="tag-pill high-weight">通用主题</span><span class="tag-pill high-weight">董事长出席</span><span class="tag-pill high-weight">培训中心</span><span class="tag-pill ">行动学习</span><span class="tag-pill ">领导力提升</span><span class="tag-pill ">储备干部</span><span class="tag-pill ">案例分析</span><span class="tag-pill ">年轻干部高级研修班</span><span class="tag-pill ">团队建设</span><span class="tag-pill ">结业答辩</span><span class="tag-pill ">战略思维</span><span class="tag-pill ">数字化转型</span><span class="tag-pill ">结业典礼</span><span class="tag-pill ">年轻干部胜任力高级研修班</span><span class="tag-pill ">领导力</span><span class="tag-pill ">领导力发展</span><span class="tag-pill ">实战演练</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="report-content">
+            <h3>一、 战略穿透：从“董事长出席”与“六型总部”启动现场，读出中国能建最紧迫的组织焦虑</h3>
+<ul>
+<li>在收官“十四五”、谋划“十五五”的关键窗口期，<strong>宋海良董事长</strong>对“四大转型”标杆项目作出明确批示，直接驱动公司总经济师、市场开发事业部总经理<strong>周小能</strong>亲自主持启动会，并要求全系统“优选一批整体形象好、商业模式新、示范作用强的‘四大转型’标杆项目”，进行“全方位、立体式解剖”——这已非一般性经验分享，而是将项目实战升维为组织级知识资产的战略动作，折射出高层对“模式可复制、能力可迁移、人才可批量供给”的深度焦虑。</li>
+<li><strong>陈勇</strong>作为公司党委常委、总会计师，在<strong>第二期财赋领军人才高级研修班</strong>开班仪式上强调“财务金融工作系统性强、事关全局”，并锚定“1＋5专项治理”与“五大专项行动”融合推进——其讲话未谈报表精度，而直指业财融合与价值创造，说明财务队伍正从“核算守门员”加速转向“战略合伙人”，组织对财务条线的赋能重心，已从合规控制全面转向战略支撑与风险前置。</li>
+<li>“六型总部”系列培训启动仪式由<strong>公司党委组织部、培训中心主要负责人</strong>共同出席，首两讲即聚焦《领导者沟通表达艺术》（主讲：<strong>闻闸</strong>）与《“悟”通好稿新逻辑》（主讲：<strong>熊文</strong>），内容精准锁定“说”与“写”两大高频失能场景；更以“正处长级以下员工全覆盖”“第一阶段6门课、后续每隔2-3周持续推出”为节奏——这种对总部基层干部“政治表达力+政策转化力”的高强度、高频次补课，暴露出组织在战略解码落地环节存在显著断点：上层有蓝图，中层缺转译，基层难执行。</li>
+</ul>
+<h3>二、 场景研判：“结业答辩”“实地研学”“三大世界之最”背后，是能建培训从“宣贯场”向“作战室”的实质性跃迁</h3>
+<ul>
+<li>在<strong>第四期项目经理高级研修班</strong>中，<strong>70名</strong>学员不是听理论，而是直抵<strong>江苏句容抽水蓄能电站项目</strong>现场，围绕“世界最高抽水蓄能电站大坝”等<strong>三大世界之最</strong>开展实地研学；课程设计嵌入<strong>李波</strong>（江苏院生产与项目管理部主任）主讲的《火力发电厂EPC总承包项目管理案例交流》与<strong>杨凯</strong>（浙江火电总监察员）主讲的《施工项目商务管理理念和方法》——这已超越案例教学，构成典型“战训一体”：用真实世界最复杂工程场景倒逼管理者暴露认知盲区、校准决策逻辑、锤炼协同本能。</li>
+<li><strong>第九期年轻干部高级研修班</strong>与<strong>第十期企业家人才高级研修班</strong>均设置“结业答辩”环节，且连续五日（<strong>11月24日—28日</strong>）密集安排“战略解码”“企业变革管理”“宏观经济分析”“组织变革”等高阶主题，并由外部顾问<strong>刘老师</strong>全程参与辅导——结合“董事长出席”“案例分析”“线上直播覆盖82家所属企业、6200余名学员”等证据链，可见该序列培训已形成“高层定调—专家带教—实战推演—公开答辩—成果固化”的闭环，其产出导向远超学时统计，直指干部能否在复杂局面中输出可验证的战略判断与组织方案。</li>
+<li><strong>中电工程“人工智能+”专项培训</strong>更体现极致场景化：由党委书记、董事长<strong>罗必雄</strong>亲自主持<strong>中电数智云上设计院专题会</strong>，70余名中高层管理者与华为<strong>梁锦彪</strong>（企业BG能源行业首席数字化转型官）、<strong>王维滨</strong>（华为南美南地区部总裁）等实战派共研“四区八国”出海沙盘、“37个合规风控要点”及“L0-L3级大模型演进路径”——这不是技术科普，而是把AI能力拆解为“业务痛点识别→技术选型匹配→组织适配改造”的作战地图，印证组织已将数字化转型从“IT部门的事”升级为“一把手工程+全员作战单元”的新范式。</li>
+</ul>
+<h3>三、 专业赋能：面向“四新能建”攻坚期，建议启动三项穿透业务神经末梢的组织能力建设行动</h3>
+<ul>
+<li>建议以<strong>“四大转型”标杆项目</strong>为母本，立即启动<strong>岗位经验萃取（AET）专项行动</strong>：遴选辽宁全省域交能融合项目负责人<strong>李志铿</strong>等一线操盘手，联合外部方法论专家，用3个月时间完成“项目开发—商务谈判—八网融合实施—风险熔断机制”全链条SOP提炼，生成可嵌入项目管理系统、可扫码调用的“数字作战手册”，解决“优秀个体经验无法沉淀为组织能力”的老大难问题。</li>
+<li>针对总部“六型能力建设”中暴露出的“政策转译弱、跨部门协同堵”痛点，建议在现有“六型总部大讲堂”基础上，增设<strong>“战略翻译官”认证计划</strong>：以<strong>闻闸</strong>《沟通表达艺术》与<strong>熊文</strong>《好稿新逻辑》为基底，辅以公司重大会议精神原文、董事会决议原文、专项行动任务清单，开展为期6周的“公文—会议—汇报—谈判”四场景实战训练，首批认证<strong>50名</strong>兼具政治素养与业务理解的“翻译骨干”，配置至各专项工作组担任联络枢纽。</li>
+<li>面向<strong>第十期企业家人才高级研修班</strong>及后续梯队，建议构建<strong>“四新能建”战略沙盘推演平台</strong>：整合单志广（国家信息中心）讲授的AI趋势、彭开军等8位企业家在第八期研修班中提出的“主责主业与相关多元辩证关系”等真问题，开发包含“新能源投资测算”“国际EPC履约压力测试”“战新产业孵化决策树”等模块的动态推演系统，让干部在零成本试错中建立对“四新”业务的底层敬畏与决策直觉，真正实现“课堂即战场、结业即开战”。</li>
+</ul>
+        </div>
+
+        <div class="footer">上海时代光华教育发展有限公司 S53 智库系统</div>
+    </div>
+</body>
+</html>
